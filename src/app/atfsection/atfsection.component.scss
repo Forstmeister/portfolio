@@ -1,0 +1,22 @@
+@import "./../../styles.scss";
+
+.hero-container {
+  @include dFlex();
+  width: 646px;
+  height: 705px;
+  position: relative;
+}
+
+.hero-image {
+  @include dFlex($jc: flex-start);
+
+  > img {
+    @include dFlex();
+    position: absolute;
+    left: 47px;
+  }
+}
+
+.hero-image-shadows {
+  @include dFlex();
+}

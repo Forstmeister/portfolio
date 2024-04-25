@@ -1,0 +1,25 @@
+@import "./../../styles.scss";
+
+nav {
+  @include dFlex($jc: space-between);
+  background-color: $darkblue;
+  height: 109px;
+  width: 100%;
+
+  > div {
+    @include dFlex();
+    padding-left: 37px;
+
+    > a {
+      @include dFlex();
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.menu-links {
+  @include dFlex();
+  width: 326px;
+  gap: 29px;
+}

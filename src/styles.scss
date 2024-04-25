@@ -3,6 +3,18 @@
   margin: 0;
 }
 
+$green: #70e61c;
+$lightblue: #1cdae6;
+$purple: #9747ff;
+$darkblue: #141d2f;
+$darkbluetransp: #141d2f 80%;
+
+@mixin dFlex($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
 /* poppins-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
