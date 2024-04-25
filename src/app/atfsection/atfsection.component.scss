@@ -1,5 +1,18 @@
 @import "./../../styles.scss";
 
+section {
+  @include dFlex($jc: space-between);
+  background-color: $darkblue;
+  background-image: url(./../../assets/img/shape.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 90px;
+  color: white;
+}
+
 .hero-container {
   @include dFlex();
   width: 646px;
@@ -19,4 +32,41 @@
 
 .hero-image-shadows {
   @include dFlex();
+  > img {
+    height: 705px;
+  }
+}
+
+.hero-iam {
+  height: 172px;
+  width: 10px;
+  @include dFlex();
+  gap: 16px;
+  color: white;
+  transform: rotate(90deg) matrix(-1, 0, 0, -1, 0, 0);
+  font-size: 64px;
+  > span {
+    height: 172px;
+  }
+}
+
+.hero-text-wrapper {
+  height: 172px;
+  display: flex;
+}
+
+.hero-text-container {
+  @include dFlex();
+  padding-right: 47px;
+
+  > div {
+    @include dFlex();
+    flex-direction: column;
+    > span {
+      font-size: 70px;
+      color: $purple;
+      margin-top: -35px;
+      text-transform: uppercase;
+    }
+  }
 }
