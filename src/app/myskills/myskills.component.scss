@@ -1,14 +1,20 @@
 @import "./../../styles.scss";
 
 section {
+  background-image: url(./../../assets/img/greenshadow.png);
+  background-repeat: no-repeat;
+  background-position-x: -265px;
+  background-position-y: 10px;
+  padding-top: 278px;
   background-color: $darkblue;
+  display: flex;
+  justify-content: space-between;
 }
 
 .icon-container {
   display: flex;
   flex-direction: column;
   gap: 54px;
-  padding-top: 278px;
   margin-left: 100px;
   > div {
     display: flex;
@@ -20,6 +26,29 @@ section {
   @include dFlex();
   flex-direction: column;
   > div {
+    > span {
+      color: white;
+    }
+  }
+}
+
+.line {
+  margin-top: 63px;
+  border-top: 4px solid $purple;
+  width: 58px;
+  margin-left: 50px;
+}
+
+.text-container-right {
+  display: flex;
+  width: 571px;
+
+  > div {
+    > h1 {
+      color: white;
+      font-size: 90px;
+      margin-bottom: 34px;
+    }
     > span {
       color: white;
     }
