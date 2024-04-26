@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AtfsectionComponent } from './atfsection/atfsection.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { MyskillsComponent } from './myskills/myskills.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,8 @@ import { AtfsectionComponent } from './atfsection/atfsection.component';
     RouterOutlet,
     NavigationComponent,
     AtfsectionComponent,
+    AboutmeComponent,
+    MyskillsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

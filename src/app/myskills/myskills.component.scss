@@ -1,0 +1,27 @@
+@import "./../../styles.scss";
+
+section {
+  background-color: $darkblue;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  padding-top: 278px;
+  margin-left: 100px;
+  > div {
+    display: flex;
+    gap: 211px;
+  }
+}
+
+.single-icon {
+  @include dFlex();
+  flex-direction: column;
+  > div {
+    > span {
+      color: white;
+    }
+  }
+}

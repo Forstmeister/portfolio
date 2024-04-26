@@ -1,28 +1,31 @@
 @import "./../../styles.scss";
 
+h1 {
+  font-size: 90px;
+  color: white;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 section {
-  @include dFlex($jc: space-between);
   background-color: $darkblue;
   background-image: url(./../../assets/img/shape.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-h1 {
-  font-size: 90px;
-  color: white;
+.hero-wrapper {
+  @include dFlex($jc: space-between);
 }
 
 .hero-container {
   @include dFlex();
-  width: 646px;
   height: 705px;
   position: relative;
 }
 
 .hero-image {
   @include dFlex($jc: flex-start);
-
   > img {
     @include dFlex();
     position: absolute;
@@ -35,6 +38,10 @@ h1 {
   > img {
     height: 705px;
   }
+}
+
+.hero-text-wrapper {
+  display: flex;
 }
 
 .hero-iam {
@@ -50,15 +57,28 @@ h1 {
   }
 }
 
-.hero-text-wrapper {
+.hero-text-headline {
   height: 172px;
-  display: flex;
+}
+
+.button-container {
+  > button {
+    margin-top: 44px;
+    width: 165px;
+    height: 58px;
+    border-radius: 10px;
+    background-color: $green;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 23px;
+  }
 }
 
 .hero-text-container {
   @include dFlex();
-  padding-right: 47px;
-
+  flex-direction: column;
+  margin-right: 47px;
   > div {
     @include dFlex();
     flex-direction: column;
@@ -68,5 +88,37 @@ h1 {
       margin-top: -35px;
       text-transform: uppercase;
     }
+  }
+}
+
+.contact-section {
+  margin-top: 92px;
+  @include dFlex($jc: flex-start);
+}
+
+.line {
+  border: 4px solid $purple;
+  width: 100px;
+}
+
+.icon-contact-container {
+  margin-left: 42px;
+  @include dFlex();
+  gap: 42px;
+  > div {
+    > svg {
+      @include dFlex();
+      cursor: pointer;
+    }
+  }
+}
+
+.mail-contact {
+  @include dFlex();
+  margin-left: 42px;
+  font-size: 23px;
+  > a {
+    text-decoration: none;
+    color: white;
   }
 }

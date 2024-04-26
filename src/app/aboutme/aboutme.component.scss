@@ -1,0 +1,56 @@
+@import "./../../styles.scss";
+
+section {
+  background-color: $darkblue;
+  padding-top: 138px;
+  @include dFlex($jc: space-between);
+  background-image: url(./../../assets/img/purpleshadow.png);
+  background-repeat: no-repeat;
+  background-position-x: 1395px;
+  background-size: contain;
+}
+
+.about-me-left-wrapper {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: white;
+  font-size: 90px;
+}
+
+.about-me-left {
+  width: 452px;
+  > span {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.icon-about-me-text {
+  margin-top: 35px;
+  display: flex;
+  gap: 26px;
+  > span {
+    color: white;
+  }
+}
+
+.about-me-right {
+  display: flex;
+  > div {
+    > img {
+      width: 453px;
+      border-radius: 100%;
+      border: 4px solid $green;
+    }
+  }
+}
+
+.line {
+  margin-top: 238px;
+  border-top: 4px solid $green;
+  width: 267px;
+}
