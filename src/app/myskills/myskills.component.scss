@@ -1,10 +1,6 @@
 @import "./../../styles.scss";
 
 section {
-  background-image: url(./../../assets/img/greenshadow.png);
-  background-repeat: no-repeat;
-  background-position-x: -265px;
-  background-position-y: 10px;
   padding-top: 278px;
   background-color: $darkblue;
   display: flex;
@@ -26,7 +22,12 @@ section {
   @include dFlex();
   flex-direction: column;
   > div {
+    height: 60px;
+    width: 60px;
     > span {
+      @include dFlex();
+      margin-top: 5.5px;
+      text-align: center;
       color: white;
     }
   }
@@ -34,7 +35,7 @@ section {
 
 .line {
   margin-top: 63px;
-  border-top: 4px solid $purple;
+  border-top: 8px solid $purple;
   width: 58px;
   margin-left: 50px;
 }
@@ -42,15 +43,40 @@ section {
 .text-container-right {
   display: flex;
   width: 571px;
-
   > div {
     > h1 {
       color: white;
       font-size: 90px;
       margin-bottom: 34px;
     }
-    > span {
-      color: white;
-    }
+  }
+}
+
+.skills-tex-container {
+  @include dFlex();
+  flex-direction: column;
+  > span {
+    color: white;
+  }
+  > button {
+    margin-top: 57px;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 58px;
+    background-color: $green;
+    color: white;
+    font-size: 23px;
+    border-radius: 10px;
+  }
+}
+
+.green-shadow {
+  > img {
+    position: absolute;
+    top: 2000px;
+    display: inline-block;
+    left: -352px;
+    transform: rotate(60deg);
   }
 }

@@ -1,0 +1,71 @@
+@import "./../../styles.scss";
+
+section {
+  background-color: $darkblue;
+  height: 500px;
+}
+
+.portfolio-project-one {
+  @include dFlex();
+}
+
+.project-text {
+  @include dFlex($jc: flex-start);
+  flex-direction: column;
+  width: 513px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  > span {
+    @include dFlex($jc: flex-start);
+  }
+}
+
+.head {
+  color: $purple;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: $green;
+}
+
+.text {
+  color: white;
+}
+
+.button-container {
+  margin-top: 35px;
+  @include dFlex($jc: flex-start);
+  width: 375px;
+  gap: 86px;
+}
+
+.first-button {
+  @include dFlex();
+  border: none;
+  background-color: $purple;
+  color: white;
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: 400;
+  width: 152px;
+  height: 58px;
+  cursor: pointer;
+}
+
+.second-button {
+  @include dFlex();
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  width: 137px;
+  height: 58px;
+  border: 1px solid $green;
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: 400;
+}
