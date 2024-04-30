@@ -45,8 +45,84 @@ h1 {
   @include dFlex($jc: space-between);
 }
 
-form {
+.form-container {
+  width: 617px;
   display: flex;
   flex-direction: column;
   margin-right: 100px;
+}
+
+.error {
+  border: 1px solid #e61c40 !important;
+  > div {
+    > input {
+      border: 1px solid #e61c40 !important;
+      &:focus {
+        outline: #e61c40;
+      }
+    }
+  }
+}
+
+.checkbox {
+  color: white;
+  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  > input {
+    display: flex;
+    align-items: flex-start;
+    padding-block: 0;
+    padding-inline: 0;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 617px;
+
+  > div {
+    > input {
+      width: 100%;
+      border: 1px solid $purple;
+      padding: 15px 25px;
+      border-radius: 10px;
+      background-color: transparent;
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+      &::placeholder {
+        color: white;
+      }
+      &:hover {
+        border: 1px solid $green;
+      }
+      &:focus {
+        outline: $green;
+      }
+    }
+    > textarea {
+      color: white;
+      width: 100%;
+      max-width: 100%;
+      background-color: transparent;
+      border: 1px solid $purple;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      &::placeholder {
+        color: white;
+      }
+      &:hover {
+        border: 1px solid $green;
+      }
+      &:focus {
+        outline: $green;
+      }
+    }
+  }
 }

@@ -17,7 +17,7 @@
       >
       <span> Need a Frontend developer? <b>Contact me!</b> </span>
     </div>
-    <div class="form">
+    <div class="form-container">
       <form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
         <div class="form-group">
           <input
@@ -55,7 +55,7 @@
             required
           ></textarea>
         </div>
-        <div>
+        <div class="checkbox">
           <input
             type="checkbox"
             class="form-control"
@@ -64,6 +64,7 @@
             [(ngModel)]="userDetails.checkbox"
             required
           />
+          <span>soidufsaoduoasdoiadu</span>
         </div>
         <button type="submit" [disabled]="userForm.invalid">Submit</button>
       </form>
