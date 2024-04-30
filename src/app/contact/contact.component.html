@@ -1,0 +1,72 @@
+<section>
+  <div class="header">
+    <div class="line"></div>
+    <div class="headline">
+      <h1>Contact</h1>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="info-box">
+      <div class="sub-head">
+        <span>Got a problem to solve?</span>
+      </div>
+
+      <span
+        >Contact me through this form, I am interested in hearing from you,
+        knowing your ideas and contributing to your projects with my work.</span
+      >
+      <span> Need a Frontend developer? <b>Contact me!</b> </span>
+    </div>
+    <div class="form">
+      <form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+        <div class="form-group">
+          <input
+            placeholder="your name"
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            [(ngModel)]="userDetails.name"
+            (ngModelChange)="onNameChange($event)"
+            required
+          />
+          <div *ngIf="userDetails.name == ''">Name is required.</div>
+        </div>
+        <div>
+          <input
+            placeholder="your email"
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            [(ngModel)]="userDetails.email"
+            required
+            email
+          />
+        </div>
+        <div>
+          <textarea
+            placeholder="your message"
+            type="text"
+            class="form-control"
+            id="message"
+            name="message"
+            [(ngModel)]="userDetails.message"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            class="form-control"
+            id="checkbox"
+            name="checkbox"
+            [(ngModel)]="userDetails.checkbox"
+            required
+          />
+        </div>
+        <button type="submit" [disabled]="userForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>

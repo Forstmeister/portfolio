@@ -1,12 +1,14 @@
 @import "./../../styles.scss";
 
 section {
+  @include dFlex();
   background-color: $darkblue;
   height: 500px;
+  padding-bottom: 150px;
 }
 
-.portfolio-project-one {
-  @include dFlex();
+a {
+  text-decoration: none;
 }
 
 .project-text {

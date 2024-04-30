@@ -1,22 +1,22 @@
-<section>
-  <div class="portfolio-project-one">
-    <div>
-      <img src="./../../assets/img/join photo.png" alt="" />
-    </div>
-    <div class="project-text">
-      <div class="description">
-        <span class="head">Join</span>
-        <span class="subtitle"
-          >Angular | TypeScript | HTML | CSS | Firebase
-        </span>
-        <span class="text"
-          >Task manager inspired by the Kanban System. Create and organize tasks
-          using drag and drop functions, assign users and categories.
-        </span>
-        <div class="button-container">
+<section
+  *ngFor="let item of portfolio; let odd = odd"
+  [style.flex-direction]="odd ? 'row-reverse' : 'row'"
+>
+  <div>
+    <img [src]="item.image" alt="" />
+  </div>
+  <div class="project-text">
+    <div class="description">
+      <span class="head">{{ item.title }}</span>
+      <span class="subtitle"> {{ item.subtitle }}</span>
+      <span class="text">{{ item.description }}</span>
+      <div class="button-container">
+        <a [href]="item.link">
           <button class="first-button">Live test</button>
+        </a>
+        <a [href]="item.github">
           <button class="second-button">Github</button>
-        </div>
+        </a>
       </div>
     </div>
   </div>

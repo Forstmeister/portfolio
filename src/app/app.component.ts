@@ -7,6 +7,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { MyskillsComponent } from './myskills/myskills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { PortfolioProjectComponent } from './portfolio-project/portfolio-project
     MyskillsComponent,
     PortfolioComponent,
     PortfolioProjectComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
