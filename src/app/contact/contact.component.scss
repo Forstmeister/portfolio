@@ -52,16 +52,23 @@ h1 {
   margin-right: 100px;
 }
 
+.form-group {
+  position: relative;
+}
+
 .error {
-  border: 1px solid #e61c40 !important;
-  > div {
-    > input {
-      border: 1px solid #e61c40 !important;
-      &:focus {
-        outline: #e61c40;
-      }
-    }
+  border-color: #e61c40 !important;
+  color: #e61c40 !important;
+
+  &:focus {
+    outline: #e61c40 !important;
   }
+}
+
+.alert-icon {
+  position: absolute;
+  top: 15px;
+  right: -25.5px;
 }
 
 .checkbox {
@@ -86,7 +93,10 @@ h1 {
       background-color: rgba(255, 255, 255, 0.24);
     }
     &:checked ~ .checkmark {
-      background-image: url(./../../assets/img/checkedicon.png);
+      background-image: url(./../../assets/img/checkedicongreen.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
       display: block;
     }
   }
@@ -120,11 +130,15 @@ h1 {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   width: 617px;
 
   > div {
+    width: 100%;
     > input {
+      position: relative;
       width: 100%;
       border: 1px solid $purple;
       padding: 15px 25px;
@@ -163,5 +177,13 @@ form {
         outline: $green;
       }
     }
+  }
+  > button {
+    @include dFlex();
+    width: 253px;
+    height: 58px;
+    border-radius: 10px;
+    font-size: 23px;
+    margin-top: 25px;
   }
 }

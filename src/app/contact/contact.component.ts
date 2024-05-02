@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, input } from '@angular/core';
 import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import {
   FormControl,
@@ -15,7 +15,7 @@ import {
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-export class ContactComponent implements OnChanges {
+export class ContactComponent {
   userDetails = {
     name: '',
     email: '',
@@ -23,13 +23,9 @@ export class ContactComponent implements OnChanges {
     checkbox: false,
   };
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
-  }
-
-  onNameChange(newValue: string): void {
-    console.log('Name changed:', newValue);
-  }
+  nameValueEntered: boolean = false;
+  emailValueEntered: boolean = false;
+  messageValueEntered: boolean = false;
 
   submitForm(form: any): void {
     if (form.valid) {
@@ -37,7 +33,24 @@ export class ContactComponent implements OnChanges {
     }
   }
 
-  test() {
-    console.log(this.userDetails);
+  inputClicked(value: string) {
+    if (value === 'name') {
+      this.nameValueEntered = true;
+      if (this.userDetails.name.length > 0) {
+        this.nameValueEntered = false;
+      }
+    }
+    if (value === 'email') {
+      this.emailValueEntered = true;
+      if (this.userDetails.email.length > 0) {
+        this.emailValueEntered = false;
+      }
+    }
+    if (value === 'message') {
+      this.messageValueEntered = true;
+      if (this.userDetails.message.length > 0) {
+        this.messageValueEntered = false;
+      }
+    }
   }
 }
