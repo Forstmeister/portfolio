@@ -30,7 +30,7 @@
             (ngModelChange)="onNameChange($event)"
             required
           />
-          <div *ngIf="userDetails.name == ''">Name is required.</div>
+          <!-- <div *ngIf="userDetails.name == ''">Name is required.</div> -->
         </div>
         <div>
           <input
@@ -46,6 +46,7 @@
         </div>
         <div>
           <textarea
+            rows="8"
             placeholder="your message"
             type="text"
             class="form-control"
@@ -55,16 +56,23 @@
             required
           ></textarea>
         </div>
-        <div class="checkbox">
-          <input
-            type="checkbox"
-            class="form-control"
-            id="checkbox"
-            name="checkbox"
-            [(ngModel)]="userDetails.checkbox"
-            required
-          />
-          <span>soidufsaoduoasdoiadu</span>
+        <div class="checkbox-container">
+          <label class="checkbox">
+            <input
+              type="checkbox"
+              class="form-control"
+              id="checkbox"
+              name="checkbox"
+              [(ngModel)]="userDetails.checkbox"
+              (click)="test()"
+              required
+            />
+            <span class="checkmark"></span>
+          </label>
+          <span
+            >I've read the privacy policy and agree to the processing of my data
+            as outlined.
+          </span>
         </div>
         <button type="submit" [disabled]="userForm.invalid">Submit</button>
       </form>

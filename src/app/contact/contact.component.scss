@@ -65,16 +65,55 @@ h1 {
 }
 
 .checkbox {
-  color: white;
-  flex-direction: row;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
   > input {
-    display: flex;
-    align-items: flex-start;
-    padding-block: 0;
-    padding-inline: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:hover ~ .checkmark {
+      background-color: rgba(255, 255, 255, 0.24);
+    }
+    &:checked ~ .checkmark {
+      background-image: url(./../../assets/img/checkedicon.png);
+      display: block;
+    }
+  }
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 3px solid $green;
+  border-radius: 4px;
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+.checkbox-container {
+  @include dFlex($ai: flex-start);
+  gap: 8px;
+  width: 617px;
+  > span {
+    color: white;
   }
 }
 

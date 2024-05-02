@@ -36,4 +36,8 @@ export class ContactComponent implements OnChanges {
       console.log('Form data:', this.userDetails);
     }
   }
+
+  test() {
+    console.log(this.userDetails);
+  }
 }
