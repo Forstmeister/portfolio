@@ -8,6 +8,7 @@ import { MyskillsComponent } from './myskills/myskills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { ContactComponent } from './contact/contact.component';
     PortfolioComponent,
     PortfolioProjectComponent,
     ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,19 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, input } from '@angular/core';
-import {
-  Component,
-  OnChanges,
-  SimpleChanges,
-  ViewChild,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {
   FormControl,
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
   NgForm,
-  EmailValidator,
 } from '@angular/forms';
 
 @Component({
@@ -37,11 +30,29 @@ export class ContactComponent {
   emailValueEntered: boolean = false;
   messageValueEntered: boolean = false;
   validEmail: boolean = false;
+  submitButtonClicked: boolean = false;
 
   submitForm(form: any): void {
     if (form.valid) {
       console.log('Form data:', this.userDetails);
     }
+    this.resetForm();
+  }
+
+  submitButton() {
+    return (this.submitButtonClicked = true);
+  }
+
+  resetForm() {
+    this.userDetails.name = '';
+    this.userDetails.email = '';
+    this.userDetails.message = '';
+    this.userDetails.checkbox = false;
+    this.nameValueEntered = false;
+    this.emailValueEntered = false;
+    this.messageValueEntered = false;
+    this.validEmail = false;
+    this.submitButtonClicked = false;
   }
 
   isEmailValid(): any {
@@ -64,7 +75,9 @@ export class ContactComponent {
       if (this.userDetails.email.length > 0) {
         this.emailValueEntered = false;
         this.isEmailValid();
-        console.log(this.validEmail);
+      }
+      if (!this.validEmail) {
+        this.emailValueEntered = true;
       }
     }
     if (value === 'message') {

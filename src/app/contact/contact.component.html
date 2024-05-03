@@ -26,9 +26,13 @@
             class="form-control"
             id="name"
             name="name"
-            [class.error]="nameValueEntered"
+            [ngClass]="{
+              error: nameValueEntered,
+              allok: userDetails.name.length > 0
+            }"
             (click)="inputClicked('name')"
             [(ngModel)]="userDetails.name"
+            ng
             (ngModelChange)="inputClicked('name')"
             required
           />
@@ -71,9 +75,12 @@
             class="form-control"
             id="email"
             name="email"
-            [class.error]="
-              emailValueEntered || (userDetails.email.length > 0 && !validEmail)
-            "
+            [ngClass]="{
+              error:
+                emailValueEntered ||
+                (userDetails.email.length > 0 && !validEmail),
+              allok: !emailValueEntered && validEmail
+            }"
             (click)="inputClicked('email')"
             [(ngModel)]="userDetails.email"
             (ngModelChange)="inputClicked('email')"
@@ -86,7 +93,7 @@
           >
             <span>Enter a valid Email</span>
           </div>
-          <div *ngIf="emailValueEntered" class="alert-icon">
+          <div *ngIf="emailValueEntered && !validEmail" class="alert-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -100,7 +107,10 @@
               />
             </svg>
           </div>
-          <div *ngIf="userDetails.email.length > 0" class="alert-icon">
+          <div
+            *ngIf="userDetails.email.length > 0 && validEmail"
+            class="alert-icon"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -114,7 +124,10 @@
               />
             </svg>
           </div>
-          <div *ngIf="emailValueEntered" [ngClass]="'error'">
+          <div
+            *ngIf="emailValueEntered && userDetails.email.length == 0"
+            [ngClass]="'error'"
+          >
             email is required.
           </div>
         </div>
@@ -127,6 +140,10 @@
             id="message"
             name="message"
             [class.error]="messageValueEntered"
+            [ngClass]="{
+              error: messageValueEntered,
+              allok: userDetails.message.length > 0
+            }"
             (click)="inputClicked('message')"
             [(ngModel)]="userDetails.message"
             (ngModelChange)="inputClicked('message')"
@@ -177,13 +194,25 @@
             />
             <span class="checkmark"></span>
           </label>
-          <span
-            >I've read the privacy policy and agree to the processing of my data
-            as outlined.
-          </span>
+          <div class="checkbox-text">
+            <span
+              >I've read the privacy policy and agree to the processing of my
+              data as outlined.
+            </span>
+            <div
+              *ngIf="submitButtonClicked && !userDetails.checkbox"
+              [ngClass]="'error'"
+            >
+              please accept the privacy policy
+            </div>
+          </div>
         </div>
-        <button type="submit" [disabled]="userForm.invalid">
+        <button
+          type="submit"
+          [disabled]="!userDetails.checkbox || !userForm.valid"
+        >
           Send message :&rpar;
+          <div (click)="submitButton()" class="button-click-trigger"></div>
         </button>
       </form>
     </div>

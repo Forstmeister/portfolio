@@ -12,6 +12,7 @@
 .header {
   @include dFlex($jc: flex-start);
   gap: 50px;
+  margin-bottom: 60px;
 }
 
 section {
@@ -24,7 +25,6 @@ h1 {
 }
 
 .info-box {
-  margin-top: 60px;
   margin-left: 100px;
   display: flex;
   flex-direction: column;
@@ -39,10 +39,11 @@ h1 {
   color: white;
   font-size: 32px;
   margin-bottom: 35px;
+  font-weight: 700;
 }
 
 .wrapper {
-  @include dFlex($jc: space-between);
+  @include dFlex($jc: space-between, $ai: flex-start);
 }
 
 .form-container {
@@ -62,6 +63,13 @@ h1 {
 
   &:focus {
     outline: #e61c40 !important;
+  }
+}
+
+.allok {
+  border-color: $green !important;
+  &:focus {
+    outline: $green !important;
   }
 }
 
@@ -115,6 +123,12 @@ h1 {
     content: "";
     position: absolute;
     display: none;
+  }
+}
+
+.checkbox-text {
+  > span {
+    color: white;
   }
 }
 
@@ -179,6 +193,8 @@ form {
     }
   }
   > button {
+    cursor: pointer;
+    position: relative;
     @include dFlex();
     width: 253px;
     height: 58px;
@@ -186,4 +202,10 @@ form {
     font-size: 23px;
     margin-top: 25px;
   }
+}
+
+.button-click-trigger {
+  position: absolute;
+  width: 253px;
+  height: 58px;
 }
