@@ -71,13 +71,21 @@
             class="form-control"
             id="email"
             name="email"
-            [class.error]="emailValueEntered"
+            [class.error]="
+              emailValueEntered || (userDetails.email.length > 0 && !validEmail)
+            "
             (click)="inputClicked('email')"
             [(ngModel)]="userDetails.email"
             (ngModelChange)="inputClicked('email')"
             required
             email
           />
+          <div
+            *ngIf="!validEmail && userDetails.email.length > 0"
+            [ngClass]="'error'"
+          >
+            <span>Enter a valid Email</span>
+          </div>
           <div *ngIf="emailValueEntered" class="alert-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
