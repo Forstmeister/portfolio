@@ -1,19 +1,7 @@
-$green: #70e61c;
-$lightblue: #1cdae6;
-$purple: #9747ff;
-$darkblue: #141d2f;
-$darkbluetransp: #141d2f 80%;
-
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
   scroll-behavior: smooth;
-}
-
-@mixin dFlex($jc: center, $ai: center) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
 }
 
 /* poppins-100 - latin */
@@ -30,8 +18,7 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: 100;
-  src: url("../src/assets/fonts/poppins-v21-latin-100italic.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-100italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-200 - latin */
 @font-face {
@@ -47,8 +34,7 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: 200;
-  src: url("../src/assets/fonts/poppins-v21-latin-200italic.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-200italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-300 - latin */
 @font-face {
@@ -64,8 +50,7 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: 300;
-  src: url("../src/assets/fonts/poppins-v21-latin-300italic.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-regular - latin */
 @font-face {
@@ -73,8 +58,7 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url("../src/assets/fonts/poppins-v21-latin-regular.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-italic - latin */
 @font-face {
@@ -98,8 +82,7 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: 500;
-  src: url("../src/assets/fonts/poppins-v21-latin-500italic.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-500italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-600 - latin */
 @font-face {
@@ -115,8 +98,7 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: 600;
-  src: url("../src/assets/fonts/poppins-v21-latin-600italic.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-700 - latin */
 @font-face {
@@ -132,8 +114,7 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: 700;
-  src: url("../src/assets/fonts/poppins-v21-latin-700italic.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-800 - latin */
 @font-face {
@@ -143,7 +124,6 @@ $darkbluetransp: #141d2f 80%;
   font-weight: 800;
   src: url("../src/assets/fonts/poppins-v21-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
 /* poppins-900 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -158,6 +138,247 @@ $darkbluetransp: #141d2f 80%;
   font-family: "Poppins";
   font-style: italic;
   font-weight: 900;
-  src: url("../src/assets/fonts/poppins-v21-latin-900italic.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/poppins-v21-latin-900italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.headline {
+  display: flex;
+}
+
+.line {
+  border: 4px solid #9747ff;
+  width: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+section {
+  background-color: #141d2f;
+}
+
+h1 {
+  font-size: 90px;
+  color: white;
+}
+
+.info-box {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 473px;
+}
+.info-box > span {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.sub-head {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-container {
+  width: 617px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.error {
+  border-color: #e61c40 !important;
+  color: #e61c40 !important;
+}
+.error:focus {
+  outline: #e61c40 !important;
+}
+
+.allok {
+  border-color: #70e61c !important;
+}
+.allok:focus {
+  outline: #70e61c !important;
+}
+
+.alert-icon {
+  position: absolute;
+  top: 15px;
+  right: -25.5px;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  height: 18px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+}
+.checkbox > input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox > input:hover ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.checkbox > input:checked ~ .checkmark {
+  background-image: url(./../../assets/img/checkedicongreen.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: block;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 3px solid #70e61c;
+  border-radius: 4px;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-text > span {
+  font-size: 14px;
+  color: white;
+}
+.checkbox-text > span > a {
+  font-size: 14px;
+  color: #9747ff;
+  text-decoration: none;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.checkbox-container > span {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 617px;
+}
+form > div {
+  width: 100%;
+  margin-right: 100px;
+}
+form > div > input {
+  position: relative;
+  width: 100%;
+  border: 1px solid #9747ff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+form > div > input::-moz-placeholder {
+  color: white;
+}
+form > div > input::placeholder {
+  color: white;
+}
+form > div > input:hover {
+  border: 1px solid #70e61c;
+}
+form > div > input:focus {
+  outline: #70e61c;
+}
+form > div > textarea {
+  color: white;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border: 1px solid #9747ff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+form > div > textarea::-moz-placeholder {
+  color: white;
+}
+form > div > textarea::placeholder {
+  color: white;
+}
+form > div > textarea:hover {
+  border: 1px solid #70e61c;
+}
+form > div > textarea:focus {
+  outline: #70e61c;
+}
+form > button {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 253px;
+  height: 58px;
+  border-radius: 10px;
+  font-size: 23px;
+  margin-top: 25px;
+}
+
+.button-click-trigger {
+  position: absolute;
+  width: 253px;
+  height: 58px;
+}
+
+.icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon-container > div {
+  margin-right: 100px;
+  margin-bottom: 90px;
+}
+.icon-container > div > a > svg:hover > path {
+  fill: #70e61c;
+}
+.icon-container > div > a > svg:hover > rect {
+  stroke: #70e61c;
+}/*# sourceMappingURL=contact.component.css.map */

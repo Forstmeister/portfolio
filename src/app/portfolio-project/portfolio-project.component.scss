@@ -57,6 +57,10 @@ a {
   width: 152px;
   height: 58px;
   cursor: pointer;
+  &:hover {
+    background-color: $green;
+    transition: all 125ms ease-in-out;
+  }
 }
 
 .second-button {
@@ -70,4 +74,8 @@ a {
   border-radius: 10px;
   font-size: 23px;
   font-weight: 400;
+  &:hover {
+    background-color: $green;
+    transition: all 125ms ease-in-out;
+  }
 }

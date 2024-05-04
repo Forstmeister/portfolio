@@ -5,21 +5,45 @@ nav {
   background-color: $darkblue;
   height: 109px;
   width: 100%;
+  position: fixed;
+  z-index: 99999;
 
   > div {
     @include dFlex();
     padding-left: 37px;
+  }
+}
 
-    > a {
-      @include dFlex();
-      text-decoration: none;
-      color: white;
+.link-conatiner {
+  @include dFlex($ai: flex-start);
+  flex-direction: column;
+  > a {
+    font-size: 23px;
+    @include dFlex();
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $green;
     }
   }
+}
+
+.clicked {
+  color: $green !important;
+}
+
+.underline {
+  width: 55px;
+  border-bottom: 3px solid $purple;
+}
+
+.normal {
+  border: none;
 }
 
 .menu-links {
   @include dFlex();
   width: 326px;
   gap: 29px;
+  margin-right: 100px;
 }

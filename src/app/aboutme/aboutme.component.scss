@@ -36,6 +36,26 @@ h1 {
   > span {
     color: white;
   }
+  > div {
+    > svg {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+.bulb-icon {
+  &:hover {
+    transition: all 125ms ease-in-out;
+    transform: scale(1.3);
+  }
+}
+
+.puzzle-icon {
+  &:hover {
+    transition: all 125ms ease-in-out;
+    transform: scale(1.4) translateY(15px);
+  }
 }
 
 .about-me-right {

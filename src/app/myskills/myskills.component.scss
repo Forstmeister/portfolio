@@ -21,6 +21,13 @@ section {
 .single-icon {
   @include dFlex();
   flex-direction: column;
+  > svg {
+    z-index: 2;
+    &:hover {
+      transition: all 150ms ease-in-out;
+      transform: translateY(-10px);
+    }
+  }
   > div {
     height: 60px;
     width: 60px;
@@ -68,6 +75,11 @@ section {
     color: white;
     font-size: 23px;
     border-radius: 10px;
+    &:hover {
+      background-color: $purple;
+      transition: all 150ms ease-in-out;
+      transform: scale(1.3);
+    }
   }
 }
 

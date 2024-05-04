@@ -83,7 +83,7 @@ h1 {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  height: 18px;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -114,8 +114,8 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 18px;
+  width: 18px;
   background-color: transparent;
   border: 3px solid $green;
   border-radius: 4px;
@@ -128,14 +128,19 @@ h1 {
 
 .checkbox-text {
   > span {
+    font-size: 14px;
     color: white;
+    > a {
+      font-size: 14px;
+      color: $purple;
+      text-decoration: none;
+    }
   }
 }
 
 .checkbox-container {
-  @include dFlex($ai: flex-start);
+  @include dFlex();
   gap: 8px;
-  width: 617px;
   > span {
     color: white;
   }
@@ -151,6 +156,7 @@ form {
 
   > div {
     width: 100%;
+    margin-right: 100px;
     > input {
       position: relative;
       width: 100%;
@@ -208,4 +214,25 @@ form {
   position: absolute;
   width: 253px;
   height: 58px;
+}
+
+.icon-container {
+  width: 100%;
+  @include dFlex($jc: flex-end);
+  > div {
+    margin-right: 100px;
+    margin-bottom: 90px;
+    > a {
+      > svg {
+        &:hover {
+          > path {
+            fill: $green;
+          }
+          > rect {
+            stroke: $green;
+          }
+        }
+      }
+    }
+  }
 }

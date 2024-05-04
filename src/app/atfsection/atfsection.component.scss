@@ -16,6 +16,7 @@ section {
 
 .hero-wrapper {
   @include dFlex($jc: space-between);
+  padding-top: 109px;
 }
 
 .hero-container {
@@ -72,6 +73,11 @@ section {
     color: white;
     cursor: pointer;
     font-size: 23px;
+    &:hover {
+      transition: all 150ms ease-in-out;
+      transform: scale(1.2);
+      background-color: $purple;
+    }
   }
 }
 
@@ -106,9 +112,15 @@ section {
   @include dFlex();
   gap: 42px;
   > div {
-    > svg {
-      @include dFlex();
-      cursor: pointer;
+    > a {
+      > svg {
+        @include dFlex();
+        cursor: pointer;
+        &:hover {
+          transition: all 150ms ease-in-out;
+          transform: scale(1.5);
+        }
+      }
     }
   }
 }
@@ -120,5 +132,19 @@ section {
   > a {
     text-decoration: none;
     color: white;
+  }
+}
+
+.scroll-down {
+  @include dFlex($jc: flex-end);
+  margin-right: 100px;
+  > span {
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+    transform: rotate(90deg);
+    > svg {
+      transform: rotate(269deg);
+    }
   }
 }
