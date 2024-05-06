@@ -1,23 +1,31 @@
-<section
-  *ngFor="let item of portfolio; let odd = odd"
-  [style.flex-direction]="odd ? 'row-reverse' : 'row'"
->
-  <div>
-    <img [src]="item.image" alt="" />
-  </div>
-  <div class="project-text">
-    <div class="description">
-      <span class="head">{{ item.title }}</span>
-      <span class="subtitle"> {{ item.subtitle }}</span>
-      <span class="text">{{ item.description }}</span>
-      <div class="button-container">
-        <a [href]="item.link">
-          <button class="first-button">Live test</button>
-        </a>
-        <a [href]="item.github">
-          <button class="second-button">Github</button>
-        </a>
+<div class="wrapper">
+  <section
+    *ngFor="let item of portfolio; let odd = odd"
+    [style.flex-direction]="odd ? 'row-reverse' : 'row'"
+  >
+    <div>
+      <img [src]="item.image" alt="" />
+    </div>
+    <div class="project-text">
+      <div class="description">
+        <span class="head">{{ item.title }}</span>
+        <span class="subtitle"> {{ item.subtitle }}</span>
+        <span class="text">{{ item.description }}</span>
+        <div class="button-container">
+          <a [href]="item.link">
+            <button class="first-button">Live test</button>
+          </a>
+          <a [href]="item.github">
+            <button class="second-button">Github</button>
+          </a>
+        </div>
       </div>
     </div>
+  </section>
+  <div class="purple-shadow">
+    <img src="./../../assets/img/portfolioshadowpurple.png" alt="" />
   </div>
-</section>
+  <div class="green-shadow">
+    <img src="./../../assets/img/greenshadowportfolioi.png" alt="" />
+  </div>
+</div>

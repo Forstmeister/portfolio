@@ -1,19 +1,23 @@
 @import "./../../styles.scss";
 
 section {
+  position: relative;
+  overflow: hidden;
   background-color: $darkblue;
   padding-top: 138px;
   @include dFlex($jc: space-between);
-  background-image: url(./../../assets/img/purpleshadow.png);
+  /* background-image: url(./../../assets/img/purpleshadow.png);
   background-repeat: no-repeat;
   background-position-x: 1395px;
   background-size: contain;
+  */
 }
 
 .about-me-left-wrapper {
   margin-left: 100px;
   display: flex;
   flex-direction: column;
+  z-index: 5;
 }
 
 h1 {
@@ -59,6 +63,7 @@ h1 {
 }
 
 .about-me-right {
+  z-index: 5;
   display: flex;
   > div {
     > img {
@@ -73,4 +78,20 @@ h1 {
   margin-top: 238px;
   border-top: 4px solid $green;
   width: 267px;
+}
+
+.purple-shadow {
+  position: absolute;
+  z-index: 3;
+  right: -100px;
+  top: -37px;
+  > img {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1433px) {
+  h1 {
+    font-size: 50px;
+  }
 }

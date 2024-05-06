@@ -10,6 +10,10 @@ $darkbluetransp: #141d2f 80%;
   scroll-behavior: smooth;
 }
 
+app-portfolio-project {
+  position: relative;
+}
+
 @mixin dFlex($jc: center, $ai: center) {
   display: flex;
   justify-content: $jc;

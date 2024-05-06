@@ -2,9 +2,34 @@
 
 section {
   @include dFlex();
-  background-color: $darkblue;
   height: 500px;
   padding-bottom: 150px;
+  position: relative;
+  z-index: 5;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  background-color: $darkblue;
+}
+
+.purple-shadow {
+  > img {
+    position: absolute;
+    top: 920px;
+    left: -478px;
+    transform: rotate(45deg);
+  }
+}
+
+.green-shadow {
+  > img {
+    position: absolute;
+    top: 1790px;
+    right: -276px;
+    transform: rotate(148deg);
+  }
 }
 
 a {

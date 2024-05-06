@@ -11,6 +11,13 @@ section {
   @include dFlex($ai: flex-start);
   margin-left: 100px;
   flex-direction: column;
+  > a {
+    > img {
+      width: 260px;
+      object-fit: contain;
+    }
+  }
+
   > span {
     > a {
       color: white;
