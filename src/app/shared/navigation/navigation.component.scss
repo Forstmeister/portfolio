@@ -1,16 +1,20 @@
-@import "./../../styles.scss";
+@import "./../../../styles.scss";
 
 nav {
   @include dFlex($jc: space-between);
   background-color: $darkblue;
   height: 109px;
-
+  width: 100%;
   position: sticky;
   z-index: 99999;
   top: 0;
   > div {
     @include dFlex();
   }
+}
+
+.logo {
+  padding-left: 100px;
 }
 
 .link-conatiner {

@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './atfsection.component.html',
-  styleUrl: './atfsection.component.scss'
+  styleUrl: './atfsection.component.scss',
 })
-export class AtfsectionComponent {
-
-}
+export class AtfsectionComponent {}

@@ -1,4 +1,4 @@
-@import "./../../styles.scss";
+@import "./../../../styles.scss";
 
 h1 {
   font-size: 64px;
@@ -9,22 +9,24 @@ h1 {
 }
 
 section {
-  height: calc(100vh - 109px);
   background-color: $darkblue;
   position: relative;
+  height: calc(100vh - 109px);
 }
 
 .atf-shape {
   > img {
-    width: 100%;
     position: absolute;
-    top: 275px;
-    left: 0;
+    top: 268.6px;
+    left: -5px;
+    width: 100%;
+    height: 1080px;
     z-index: 3;
   }
 }
 
 .hero-wrapper {
+  padding-top: 109px;
   @include dFlex($jc: space-between);
 }
 
@@ -152,7 +154,11 @@ section {
   @include dFlex($jc: flex-end);
   margin-right: 100px;
   z-index: 5;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 829px;
+  animation: bounce 2.5s ease-in-out infinite;
+  z-index: 10;
   > span {
     color: white;
     font-size: 23px;
@@ -161,6 +167,16 @@ section {
     > svg {
       transform: rotate(269deg);
     }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
   }
 }
 

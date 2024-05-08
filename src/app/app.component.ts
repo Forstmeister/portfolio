@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { NavigationComponent } from './navigation/navigation.component';
-import { AtfsectionComponent } from './atfsection/atfsection.component';
-import { AboutmeComponent } from './aboutme/aboutme.component';
-import { MyskillsComponent } from './myskills/myskills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+import { AtfsectionComponent } from './landingpage/atfsection/atfsection.component';
+import { AboutmeComponent } from './landingpage/aboutme/aboutme.component';
+import { MyskillsComponent } from './landingpage/myskills/myskills.component';
+import { PortfolioComponent } from './landingpage/portfolio/portfolio.component';
+import { PortfolioProjectComponent } from './landingpage/portfolio-project/portfolio-project.component';
+import { ContactComponent } from './landingpage/contact/contact.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',

@@ -1,4 +1,4 @@
-@import "./../../styles.scss";
+@import "./../../../styles.scss";
 
 .headline {
   display: flex;
@@ -107,7 +107,7 @@ h1 {
       background-color: rgba(255, 255, 255, 0.24);
     }
     &:checked ~ .checkmark {
-      background-image: url(./../../assets/img/checkedicongreen.png);
+      background-image: url(/assets/img/checkedicongreen.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
@@ -238,7 +238,7 @@ form {
 .purple-shadow {
   > img {
     position: absolute;
-    top: 315px;
+    top: 597px;
     left: -407px;
     transform: rotate(254deg);
   }
