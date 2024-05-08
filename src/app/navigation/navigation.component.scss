@@ -4,13 +4,12 @@ nav {
   @include dFlex($jc: space-between);
   background-color: $darkblue;
   height: 109px;
-  width: 100%;
-  position: fixed;
-  z-index: 99999;
 
+  position: sticky;
+  z-index: 99999;
+  top: 0;
   > div {
     @include dFlex();
-    padding-left: 37px;
   }
 }
 
@@ -43,7 +42,6 @@ nav {
 
 .menu-links {
   @include dFlex();
-  width: 326px;
   gap: 29px;
   margin-right: 100px;
 }

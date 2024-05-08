@@ -19,6 +19,9 @@ section {
   background-color: $darkblue;
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  @include dFlex($ai: flex-start);
+  flex-direction: column;
 }
 
 h1 {
@@ -27,7 +30,7 @@ h1 {
 }
 
 .info-box {
-  margin-left: 100px;
+  padding-left: 100px;
   display: flex;
   flex-direction: column;
   width: 473px;
@@ -46,17 +49,19 @@ h1 {
 
 .wrapper {
   @include dFlex($jc: space-between, $ai: flex-start);
+  gap: 42px;
 }
 
 .form-container {
-  width: 617px;
+  max-width: 617px;
+  padding-right: 100px;
   display: flex;
-  flex-direction: column;
-  margin-right: 100px;
 }
 
 .form-group {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .error {
@@ -94,7 +99,6 @@ h1 {
   user-select: none;
   /* Hide the browser's default checkbox */
   > input {
-    position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -152,16 +156,11 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 16px;
-  width: 617px;
 
   > div {
-    width: 100%;
-    margin-right: 100px;
     > input {
-      position: relative;
-      width: 100%;
       border: 1px solid $purple;
       padding: 15px 25px;
       border-radius: 10px;
@@ -181,8 +180,6 @@ form {
     }
     > textarea {
       color: white;
-      width: 100%;
-      max-width: 100%;
       background-color: transparent;
       border: 1px solid $purple;
       padding: 15px 25px;
@@ -202,7 +199,6 @@ form {
   }
   > button {
     cursor: pointer;
-    position: relative;
     @include dFlex();
     width: 253px;
     height: 58px;
@@ -222,8 +218,8 @@ form {
   width: 100%;
   @include dFlex($jc: flex-end);
   > div {
-    margin-right: 100px;
-    margin-bottom: 90px;
+    padding-right: 100px;
+
     > a {
       > svg {
         &:hover {

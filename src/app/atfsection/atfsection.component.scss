@@ -1,25 +1,23 @@
 @import "./../../styles.scss";
 
 h1 {
-  font-size: 68px;
+  font-size: 64px;
   color: white;
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
 section {
+  height: calc(100vh - 109px);
   background-color: $darkblue;
-  /* background-image: url(./../../assets/img/shape.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  */
+  position: relative;
 }
 
 .atf-shape {
   > img {
     width: 100%;
     position: absolute;
-    top: 385px;
+    top: 318px;
     left: 0;
     z-index: 3;
   }
@@ -27,7 +25,6 @@ section {
 
 .hero-wrapper {
   @include dFlex($jc: space-between);
-  padding-top: 109px;
 }
 
 .hero-container {
@@ -42,7 +39,6 @@ section {
   > img {
     @include dFlex();
     position: absolute;
-    left: 47px;
   }
 }
 
@@ -54,25 +50,24 @@ section {
 }
 
 .hero-text-wrapper {
+  position: absolute;
+  top: 188px;
+  max-width: 718px;
+  right: 0;
+  gap: 22px;
   z-index: 5;
-  display: flex;
+  @include dFlex();
+  flex-direction: column;
 }
 
 .hero-iam {
-  height: 172px;
-  width: 10px;
-  @include dFlex();
-  gap: 16px;
   color: white;
-  transform: rotate(90deg) matrix(-1, 0, 0, -1, 0, 0);
-  font-size: 52px;
-  > span {
-    height: 172px;
-  }
+  transform: rotate(-90deg);
+  font-size: 64px;
 }
 
 .hero-text-headline {
-  height: 172px;
+  @include dFlex();
 }
 
 .button-container {
@@ -98,13 +93,11 @@ section {
 
 .hero-text-container {
   @include dFlex();
-  flex-direction: column;
-  margin-right: 47px;
+  margin-top: -16px;
   > div {
-    @include dFlex();
     flex-direction: column;
     > span {
-      font-size: 58px;
+      font-size: 55px;
       color: $purple;
       margin-top: -35px;
       text-transform: uppercase;
@@ -120,7 +113,8 @@ section {
 }
 
 .line {
-  border: 4px solid $purple;
+  background-color: $purple;
+  height: 4px;
   width: 100px;
 }
 
@@ -168,7 +162,7 @@ section {
   }
 }
 
-@media screen and (max-width: 1433px) {
+@media screen and (max-width: 1450px) {
   h1 {
     font-size: 50px;
   }
@@ -176,29 +170,16 @@ section {
   .hero-text-container {
     @include dFlex();
     flex-direction: column;
-    margin-right: 47px;
     > div {
-      @include dFlex();
-      flex-direction: column;
       > span {
         font-size: 43px;
-        color: $purple;
-        margin-top: -35px;
-        text-transform: uppercase;
       }
     }
   }
 
   .hero-iam {
-    height: 172px;
-
-    @include dFlex();
     gap: 16px;
-    color: white;
     transform: rotate(90deg) matrix(-1, 0, 0, -1, 0, -30);
     font-size: 28px;
-    > span {
-      height: 172px;
-    }
   }
 }

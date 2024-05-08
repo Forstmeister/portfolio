@@ -10,6 +10,14 @@ $darkbluetransp: #141d2f 80%;
   scroll-behavior: smooth;
 }
 
+body {
+  max-width: 1440px;
+  translate: 50%;
+  right: 50%;
+  position: absolute;
+  background-color: $darkblue;
+}
+
 app-portfolio-project {
   position: relative;
 }

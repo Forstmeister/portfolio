@@ -4,20 +4,18 @@ section {
   position: relative;
   overflow: hidden;
   background-color: $darkblue;
-  padding-top: 138px;
+  width: 100%;
+  gap: 149px;
+  height: 100vh;
   @include dFlex($jc: space-between);
-  /* background-image: url(./../../assets/img/purpleshadow.png);
-  background-repeat: no-repeat;
-  background-position-x: 1395px;
-  background-size: contain;
-  */
 }
 
 .about-me-left-wrapper {
-  margin-left: 100px;
+  padding-left: 100px;
   display: flex;
   flex-direction: column;
   z-index: 5;
+  gap: 35px;
 }
 
 h1 {
@@ -26,7 +24,7 @@ h1 {
 }
 
 .about-me-left {
-  width: 452px;
+  width: 471px;
   > span {
     color: white;
     font-size: 16px;
@@ -63,6 +61,7 @@ h1 {
 }
 
 .about-me-right {
+  width: 100%;
   z-index: 5;
   display: flex;
   > div {
@@ -76,8 +75,9 @@ h1 {
 
 .line {
   margin-top: 238px;
-  border-top: 4px solid $green;
-  width: 267px;
+  height: 4px;
+  background-color: $green;
+  width: 100%;
 }
 
 .purple-shadow {

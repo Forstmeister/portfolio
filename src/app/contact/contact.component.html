@@ -211,7 +211,15 @@
           [disabled]="!userDetails.checkbox || !userForm.valid"
         >
           Send message :&rpar;
-          <div (click)="submitButton()" class="button-click-trigger"></div>
+          <div
+            (click)="
+              submitButton();
+              inputClicked('name');
+              inputClicked('email');
+              inputClicked('message')
+            "
+            class="button-click-trigger"
+          ></div>
         </button>
       </form>
     </div>
