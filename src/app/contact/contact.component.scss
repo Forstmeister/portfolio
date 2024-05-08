@@ -49,7 +49,7 @@ h1 {
 
 .wrapper {
   @include dFlex($jc: space-between, $ai: flex-start);
-  gap: 42px;
+  width: 100%;
 }
 
 .form-container {

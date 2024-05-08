@@ -5,6 +5,7 @@ h1 {
   color: white;
   margin-block-start: 0;
   margin-block-end: 0;
+  text-wrap: nowrap;
 }
 
 section {
@@ -17,7 +18,7 @@ section {
   > img {
     width: 100%;
     position: absolute;
-    top: 318px;
+    top: 275px;
     left: 0;
     z-index: 3;
   }
@@ -53,7 +54,7 @@ section {
   position: absolute;
   top: 188px;
   max-width: 718px;
-  right: 0;
+  right: 100px;
   gap: 22px;
   z-index: 5;
   @include dFlex();
@@ -63,7 +64,7 @@ section {
 .hero-iam {
   color: white;
   transform: rotate(-90deg);
-  font-size: 64px;
+  font-size: 45px;
 }
 
 .hero-text-headline {
@@ -97,6 +98,7 @@ section {
   > div {
     flex-direction: column;
     > span {
+      text-wrap: nowrap;
       font-size: 55px;
       color: $purple;
       margin-top: -35px;
@@ -163,23 +165,4 @@ section {
 }
 
 @media screen and (max-width: 1450px) {
-  h1 {
-    font-size: 50px;
-  }
-
-  .hero-text-container {
-    @include dFlex();
-    flex-direction: column;
-    > div {
-      > span {
-        font-size: 43px;
-      }
-    }
-  }
-
-  .hero-iam {
-    gap: 16px;
-    transform: rotate(90deg) matrix(-1, 0, 0, -1, 0, -30);
-    font-size: 28px;
-  }
 }

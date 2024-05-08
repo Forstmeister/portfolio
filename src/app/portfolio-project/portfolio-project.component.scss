@@ -9,7 +9,6 @@ section {
 }
 
 .wrapper {
-  overflow: hidden;
   position: relative;
   background-color: $darkblue;
 }
@@ -17,18 +16,21 @@ section {
 .purple-shadow {
   > img {
     position: absolute;
-    top: 920px;
-    left: -478px;
+    top: 1113px;
+    left: -125px;
     transform: rotate(45deg);
+    width: 500px;
   }
 }
 
 .green-shadow {
   > img {
     position: absolute;
+    width: 789px;
+    height: 752px;
     top: 1790px;
-    right: -276px;
-    transform: rotate(148deg);
+    right: 12px;
+    transform: rotate(189deg);
   }
 }
 

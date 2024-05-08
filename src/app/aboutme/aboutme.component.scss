@@ -2,20 +2,25 @@
 
 section {
   position: relative;
-  overflow: hidden;
   background-color: $darkblue;
   width: 100%;
-  gap: 149px;
   height: 100vh;
-  @include dFlex($jc: space-between);
+  @include dFlex($jc: flex-start);
 }
 
 .about-me-left-wrapper {
-  padding-left: 100px;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   z-index: 5;
   gap: 35px;
+  padding-left: 100px;
+}
+
+.wrapper {
+  @include dFlex();
+  width: 100%;
+  gap: 145px;
 }
 
 h1 {
@@ -63,7 +68,7 @@ h1 {
 .about-me-right {
   width: 100%;
   z-index: 5;
-  display: flex;
+  @include dFlex();
   > div {
     > img {
       width: 453px;
@@ -73,8 +78,12 @@ h1 {
   }
 }
 
+.picture {
+  width: 453px;
+  @include dFlex();
+}
+
 .line {
-  margin-top: 238px;
   height: 4px;
   background-color: $green;
   width: 100%;
@@ -91,7 +100,4 @@ h1 {
 }
 
 @media screen and (max-width: 1433px) {
-  h1 {
-    font-size: 50px;
-  }
 }

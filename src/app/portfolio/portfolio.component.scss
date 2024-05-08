@@ -18,12 +18,14 @@ h1 {
 
 .line-left {
   width: 109px;
-  border: 4px solid $purple;
+  height: 4px;
+  background-color: $purple;
 }
 
 .line-right {
   width: 484px;
-  border: 4px solid $purple;
+  height: 4px;
+  background-color: $purple;
 }
 
 .portfolio-header-text {

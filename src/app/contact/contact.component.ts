@@ -8,11 +8,12 @@ import {
   ReactiveFormsModule,
   NgForm,
 } from '@angular/forms';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, PortfolioComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
