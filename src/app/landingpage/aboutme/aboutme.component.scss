@@ -68,7 +68,8 @@ h1 {
 .about-me-right {
   width: 100%;
   z-index: 5;
-  @include dFlex();
+  overflow-x: hidden;
+  @include dFlex($jc: flex-end);
   > div {
     > img {
       width: 453px;
@@ -79,7 +80,6 @@ h1 {
 }
 
 .picture {
-  width: 453px;
   @include dFlex();
 }
 
@@ -92,8 +92,9 @@ h1 {
 .purple-shadow {
   position: absolute;
   z-index: 3;
-  right: -100px;
-  top: -136px;
+  right: 8px;
+  top: -52px;
+
   > img {
     height: 700px;
   }

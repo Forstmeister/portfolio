@@ -10,6 +10,8 @@ section {
 }
 
 .wrapper {
+  width: 100%;
+  overflow-x: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -19,11 +21,10 @@ section {
 .icon-container {
   display: flex;
   z-index: 99;
+  padding-left: 100px;
   max-width: 721px;
   flex-direction: column;
   gap: 54px;
-  margin-right: 48px;
-
   > div {
     display: flex;
     gap: 123px;
@@ -92,6 +93,7 @@ h1 {
   }
 }
 .headline {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
