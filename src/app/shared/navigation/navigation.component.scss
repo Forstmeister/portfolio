@@ -8,9 +8,6 @@ nav {
   position: sticky;
   z-index: 99999;
   top: 0;
-  > div {
-    @include dFlex();
-  }
 }
 
 .logo {
@@ -48,4 +45,51 @@ nav {
   @include dFlex();
   gap: 29px;
   margin-right: 100px;
+}
+
+.d-none {
+  display: none;
+}
+
+.mobile-icon {
+  > svg {
+    cursor: pointer;
+  }
+}
+
+.mobile-menu-container {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  background-color: #141d2fcc;
+  position: sticky;
+  z-index: 999;
+  left: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-links-mobile {
+  @include dFlex();
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  gap: 29px;
+}
+
+@media only screen and (max-width: 800px) {
+  .mobile-icon {
+    display: unset !important;
+    padding-right: 25px;
+  }
+  .logo {
+    padding-left: 25px;
+  }
+
+  .menu-links {
+    display: none;
+  }
 }

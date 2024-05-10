@@ -2,7 +2,7 @@ $green: #70e61c;
 $lightblue: #1cdae6;
 $purple: #9747ff;
 $darkblue: #141d2f;
-$darkbluetransp: #141d2f 80%;
+$darkbluetransp: #141d2fab;
 
 * {
   font-family: "Poppins", sans-serif;
@@ -16,7 +16,6 @@ body {
   translate: 50%;
   right: 50%;
   position: absolute;
-
   background-color: $darkblue;
 }
 

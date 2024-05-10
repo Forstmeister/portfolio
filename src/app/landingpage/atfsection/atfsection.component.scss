@@ -180,5 +180,37 @@ section {
   }
 }
 
-@media screen and (max-width: 1450px) {
+@media only screen and (max-width: 800px) {
+  .hero-wrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero-text-wrapper {
+    position: unset;
+  }
+
+  .hero-text-container {
+    > div {
+      > span {
+        font-size: 39px;
+        margin-top: -19px;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+  .hero-iam {
+    font-size: 32px;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .hero-container {
+    max-height: 448px;
+  }
 }
