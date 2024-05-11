@@ -184,6 +184,7 @@ section {
   .hero-wrapper {
     justify-content: center;
     flex-direction: column;
+    padding-top: 46px;
   }
 
   .hero-text-wrapper {
@@ -199,6 +200,18 @@ section {
     }
   }
 
+  .hero-image-shadows {
+    > img {
+      width: 100%;
+    }
+  }
+
+  .atf-shape {
+    top: 428.6px;
+    left: -5px;
+    width: 100%;
+  }
+
   h1 {
     font-size: 45px;
   }
@@ -208,9 +221,30 @@ section {
 
   .hero-image {
     justify-content: center;
+    max-width: 581px;
+    > img {
+      width: 410px;
+      margin-right: -71px;
+    }
   }
 
   .hero-container {
     max-height: 448px;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  .atf-shape {
+    display: none;
+  }
+
+  .line {
+    width: 64px;
+  }
+
+  .mail-contact {
+    display: none;
   }
 }
