@@ -108,3 +108,52 @@ a {
     transition: all 125ms ease-in-out;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    @include dFlex();
+    flex-direction: column;
+    row-gap: 80px;
+  }
+
+  section {
+    height: auto;
+    padding-bottom: 0;
+    flex-direction: column !important;
+    > div {
+      flex-direction: column;
+      > img {
+        width: 390px;
+      }
+    }
+  }
+
+  .project-text {
+    @include dFlex();
+    width: 340px;
+  }
+
+  .description {
+    padding-left: 25px;
+    padding-right: 25px;
+    > span {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .purple-shadow {
+    overflow-x: hidden;
+    > img {
+      top: 1350px;
+      left: -125px;
+      transform: rotate(45deg);
+      width: 254px;
+    }
+  }
+
+  .green-shadow {
+    overflow-x: hidden;
+    display: none;
+  }
+}

@@ -100,5 +100,36 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1433px) {
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .about-me-left-wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .about-me-left {
+    width: 100%;
+  }
+
+  .wrapper {
+    gap: 0;
+  }
+
+  .about-me-right {
+    display: none;
+  }
+
+  .purple-shadow {
+    overflow-x: hidden;
+    z-index: 3;
+    right: 0px;
+    top: -52px;
+    width: 185px;
+    > img {
+      height: 545px;
+    }
+  }
 }

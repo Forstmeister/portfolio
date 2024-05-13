@@ -189,13 +189,17 @@ section {
 
   .hero-text-wrapper {
     position: unset;
+    gap: 0;
   }
 
   .hero-text-container {
+    margin-top: 5px;
+    margin-right: 29px;
+    margin-left: 3px;
     > div {
       > span {
-        font-size: 39px;
-        margin-top: -19px;
+        font-size: 31px;
+        margin-top: -17px;
       }
     }
   }
@@ -203,20 +207,23 @@ section {
   .hero-image-shadows {
     > img {
       width: 100%;
+      height: 589px;
     }
   }
 
   .atf-shape {
+    overflow-x: hidden;
     top: 428.6px;
     left: -5px;
     width: 100%;
   }
 
   h1 {
-    font-size: 45px;
+    font-size: 36px;
   }
   .hero-iam {
-    font-size: 32px;
+    font-size: 26px;
+    margin-right: -10px;
   }
 
   .hero-image {
@@ -224,7 +231,6 @@ section {
     max-width: 581px;
     > img {
       width: 410px;
-      margin-right: -71px;
     }
   }
 
@@ -237,7 +243,32 @@ section {
   }
 
   .atf-shape {
-    display: none;
+    > img {
+      top: 373.6px;
+      left: 0px;
+      width: 100%;
+      height: 265px;
+      z-index: 3;
+    }
+  }
+
+  .button-container {
+    > a {
+      > button {
+        margin-top: 24px;
+        width: 133px;
+        height: 49px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .contact-section {
+    margin-top: 35px;
+  }
+
+  .icon-contact-container {
+    margin-left: 52px;
   }
 
   .line {

@@ -243,3 +243,66 @@ form {
     transform: rotate(254deg);
   }
 }
+
+@media only screen and (max-width: 800px) {
+  section {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .header {
+    gap: 4px;
+    margin-bottom: 0;
+  }
+
+  .wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .info-box {
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    > span {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  .sub-head {
+    padding-left: 25px;
+    padding-right: 25px;
+    > span {
+      font-size: 23px;
+    }
+  }
+
+  .form-container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .icon-container {
+    > div {
+      padding-top: 29px;
+      padding-right: 25px;
+      padding-bottom: 48px;
+    }
+  }
+
+  .purple-shadow {
+    overflow-x: hidden;
+    > img {
+      top: 691px;
+      left: -363px;
+      transform: rotate(254deg);
+      width: 607px;
+    }
+  }
+}
