@@ -15,12 +15,14 @@ section {
 }
 
 .atf-shape {
+  overflow-x: hidden;
   > img {
+    overflow-x: hidden;
     position: absolute;
     top: 268.6px;
     left: -5px;
     width: 100%;
-    height: 1080px;
+    height: 1335px;
     z-index: 3;
   }
 }
@@ -38,7 +40,7 @@ section {
 
 .hero-image {
   @include dFlex($jc: flex-start);
-  z-index: 4;
+  z-index: 2;
   > img {
     @include dFlex();
     position: absolute;
@@ -180,7 +182,11 @@ section {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
+  section {
+    scroll-margin-top: 109px;
+  }
+
   .hero-wrapper {
     justify-content: center;
     flex-direction: column;
@@ -198,8 +204,8 @@ section {
     margin-left: 3px;
     > div {
       > span {
-        font-size: 31px;
-        margin-top: -17px;
+        font-size: 50px;
+        margin-top: -31px;
       }
     }
   }
@@ -219,10 +225,10 @@ section {
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 60px;
   }
   .hero-iam {
-    font-size: 26px;
+    font-size: 42px;
     margin-right: -10px;
   }
 
@@ -277,5 +283,86 @@ section {
 
   .mail-contact {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 36px;
+  }
+  .hero-iam {
+    font-size: 26px;
+    margin-right: -10px;
+  }
+
+  .hero-text-container {
+    > div {
+      > span {
+        font-size: 31px;
+        margin-top: -18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero-image {
+    > img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+  .hero-iam {
+    font-size: 20px;
+  }
+
+  .hero-text-container {
+    > div {
+      > span {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .icon-contact-container {
+    margin-left: 15px;
+  }
+
+  .hero-text-container {
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+  .hero-iam {
+    font-size: 17px;
+    margin-right: -5px;
+  }
+
+  .hero-text-container {
+    > div {
+      > span {
+        font-size: 22px;
+        margin-top: -14px;
+      }
+    }
+  }
+
+  .atf-shape {
+    > img {
+      top: 357.6px;
+      left: 0px;
+      width: 100%;
+      height: 184px;
+      z-index: 3;
+    }
   }
 }

@@ -100,7 +100,34 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .about-me-left-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .wrapper {
+    gap: 0;
+  }
+
+  .about-me-right {
+    > div {
+      > img {
+        width: 350px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 800px) {
+  section {
+    scroll-margin-top: 50px;
+  }
+
   h1 {
     font-size: 45px;
   }
@@ -131,5 +158,10 @@ h1 {
     > img {
       height: 545px;
     }
+  }
+}
+@media only screen and (max-width: 320px) {
+  section {
+    scroll-margin-top: 109px;
   }
 }

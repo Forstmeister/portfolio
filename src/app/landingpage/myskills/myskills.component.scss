@@ -16,6 +16,11 @@ section {
   align-items: flex-start;
   justify-content: center;
   justify-content: space-between;
+  > a {
+    > button {
+      display: none;
+    }
+  }
 }
 
 .icon-container {
@@ -74,7 +79,7 @@ h1 {
 
 .text-container-right {
   display: flex;
-  max-width: 571px;
+  width: 571px;
   flex-direction: column;
   align-items: center;
   > a {
@@ -131,13 +136,33 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .icon-container {
+    padding-left: 50px;
+  }
+
+  .text-container-right {
+    padding-left: 50px;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  section {
+    scroll-margin-top: 109px;
+  }
+
   .wrapper {
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
     > a {
+      text-decoration: none;
       > button {
+        display: block;
         margin-top: 67px;
         z-index: 9999;
         cursor: pointer;
@@ -167,7 +192,10 @@ h1 {
 
   .text {
     max-width: 358px;
-    padding-right: 25px;
+    > span {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
   }
 
   .headline {
@@ -179,8 +207,8 @@ h1 {
   }
 
   .icon-container {
-    width: 340px;
-    padding: 0;
+    padding-right: 25px;
+    padding-left: 25px;
     margin-top: 35px;
     > div {
       column-gap: 56px;
@@ -196,6 +224,26 @@ h1 {
       transform: rotate(238deg);
       z-index: 5;
       width: 272px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .icon-container {
+    width: 100%;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  .single-icon {
+    > svg {
+      height: 40px;
+      width: 40px;
+    }
+    > div {
+      > span {
+        font-size: 13px;
+      }
     }
   }
 }

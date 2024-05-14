@@ -248,6 +248,8 @@ form {
   section {
     height: auto;
     min-height: 100vh;
+    scroll-margin: 109px;
+    padding-top: 109px;
   }
 
   h1 {
@@ -286,6 +288,7 @@ form {
   .form-container {
     padding-right: 25px;
     padding-left: 25px;
+    z-index: 99;
   }
 
   .icon-container {
@@ -303,6 +306,28 @@ form {
       left: -363px;
       transform: rotate(254deg);
       width: 607px;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .purple-shadow {
+    > img {
+      top: 885px;
+      left: -363px;
+      transform: rotate(254deg);
+      width: 617px;
+    }
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .purple-shadow {
+    > img {
+      top: 1018px;
+      left: -363px;
+      transform: rotate(254deg);
+      width: 445px;
     }
   }
 }
