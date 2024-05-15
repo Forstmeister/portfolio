@@ -2,6 +2,8 @@
   <section
     *ngFor="let item of portfolio; let odd = odd"
     [style.flex-direction]="odd ? 'row-reverse' : 'row'"
+    [attr.data-aos]="odd ? 'fade-left' : 'fade-right'"
+    add
   >
     <div>
       <img [src]="item.image" alt="" />

@@ -12,6 +12,7 @@ section {
   background-color: $darkblue;
   position: relative;
   height: calc(100vh - 109px);
+  padding-bottom: 148px;
 }
 
 .atf-shape {
@@ -190,7 +191,7 @@ section {
   .hero-wrapper {
     justify-content: center;
     flex-direction: column;
-    padding-top: 46px;
+    padding-top: 25px;
   }
 
   .hero-text-wrapper {
@@ -244,10 +245,6 @@ section {
     max-height: 448px;
   }
 
-  .scroll-down {
-    display: none;
-  }
-
   .atf-shape {
     > img {
       top: 373.6px;
@@ -287,6 +284,11 @@ section {
 }
 
 @media only screen and (max-width: 800px) {
+  section {
+    height: 100vh;
+    margin-bottom: 82px;
+  }
+
   h1 {
     font-size: 36px;
   }
@@ -305,13 +307,17 @@ section {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 425px) {
   .hero-image {
     > img {
       width: 100%;
       object-fit: cover;
       aspect-ratio: 1 / 1;
     }
+  }
+
+  .scroll-down {
+    display: none;
   }
 
   h1 {
@@ -330,7 +336,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 350px) {
   .icon-contact-container {
     margin-left: 15px;
   }

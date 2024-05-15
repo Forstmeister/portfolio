@@ -52,7 +52,7 @@ export class NavigationComponent {
     setTimeout(() => {
       this.openNavigation();
       // this.clickedIndex = null;
-    }, 700);
+    }, 900);
   }
   openNavigation() {
     this.mobileIconClicked = !this.mobileIconClicked;

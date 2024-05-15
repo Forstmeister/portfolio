@@ -157,7 +157,7 @@ a {
   .purple-shadow {
     overflow-x: hidden;
     > img {
-      top: 1350px;
+      top: 1490px;
       left: -125px;
       transform: rotate(45deg);
       width: 254px;
@@ -176,7 +176,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 370px) {
   .button-container {
     gap: 30px;
     > a {
