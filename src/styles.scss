@@ -19,8 +19,29 @@ body {
   background-color: $darkblue;
 }
 
+app-atfsection {
+  overflow-x: hidden;
+}
+
+app-aboutme {
+  overflow-x: hidden;
+}
+
+app-myskills {
+  overflow-x: hidden;
+}
+
+app-portfolio {
+  overflow-x: hidden;
+}
+
 app-portfolio-project {
   position: relative;
+  overflow-x: hidden;
+}
+
+app-contact {
+  overflow-x: hidden;
 }
 
 @mixin dFlex($jc: center, $ai: center) {

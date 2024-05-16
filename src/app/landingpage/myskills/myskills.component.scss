@@ -133,6 +133,7 @@ h1 {
     left: -301px;
     transform: rotate(216deg);
     z-index: 5;
+    width: 488px;
   }
 }
 
@@ -219,11 +220,11 @@ h1 {
   .green-shadow {
     overflow-x: hidden;
     > img {
-      top: 703px;
+      top: 603px;
       left: -150px;
       transform: rotate(238deg);
       z-index: 5;
-      width: 272px;
+      width: 300px;
     }
   }
 }
@@ -231,7 +232,7 @@ h1 {
 @media screen and (max-width: 400px) {
   section {
     margin-bottom: 109px;
-    scroll-margin-top: 200px;
+    scroll-margin-top: 150px;
   }
 }
 

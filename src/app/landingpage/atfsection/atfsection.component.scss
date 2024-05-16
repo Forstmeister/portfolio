@@ -11,7 +11,7 @@ h1 {
 section {
   background-color: $darkblue;
   position: relative;
-  height: calc(100vh - 109px);
+  height: 100vh;
   padding-bottom: 148px;
 }
 
@@ -117,6 +117,7 @@ section {
   z-index: 5;
   position: relative;
   @include dFlex($jc: flex-start);
+  overflow-x: hidden;
 }
 
 .line {
@@ -184,10 +185,6 @@ section {
 }
 
 @media only screen and (max-width: 1160px) {
-  section {
-    scroll-margin-top: 109px;
-  }
-
   .hero-wrapper {
     justify-content: center;
     flex-direction: column;
@@ -284,11 +281,6 @@ section {
 }
 
 @media only screen and (max-width: 800px) {
-  section {
-    height: 100vh;
-    margin-bottom: 82px;
-  }
-
   h1 {
     font-size: 36px;
   }

@@ -6,6 +6,7 @@ section {
   width: 100%;
   height: 100vh;
   @include dFlex($jc: flex-start);
+  overflow-x: hidden;
 }
 
 .about-me-left-wrapper {
@@ -125,8 +126,7 @@ h1 {
 
 @media only screen and (max-width: 940px) {
   section {
-    margin-bottom: 154px;
-    scroll-margin-top: 109px;
+    margin-bottom: 0;
   }
 
   h1 {
@@ -154,15 +154,15 @@ h1 {
     overflow-x: hidden;
     z-index: 3;
     right: 0px;
-    top: -52px;
-    width: 185px;
+    top: 9px;
+    width: 133px;
     > img {
       height: 545px;
     }
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
   section {
-    scroll-margin-top: 250px;
+    padding-bottom: 154px;
   }
 }
