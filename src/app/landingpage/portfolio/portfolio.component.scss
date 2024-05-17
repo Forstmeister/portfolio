@@ -36,13 +36,9 @@ h1 {
   font-size: 16px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1132px) {
   section {
     padding-bottom: 0;
-  }
-
-  h1 {
-    font-size: 45px;
   }
 
   .line-right {
@@ -61,5 +57,11 @@ h1 {
     text-align: center;
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 45px;
   }
 }

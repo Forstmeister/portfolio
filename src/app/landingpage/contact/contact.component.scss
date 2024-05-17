@@ -248,15 +248,11 @@ form {
   display: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1132px) {
   section {
     height: auto;
     min-height: 100vh;
     padding-top: 109px;
-  }
-
-  h1 {
-    font-size: 45px;
   }
 
   .header {
@@ -320,6 +316,12 @@ form {
     > img {
       width: 350px;
     }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 45px;
   }
 }
 

@@ -12,19 +12,30 @@ $darkbluetransp: #141d2fab;
 
 body {
   width: 100%;
-  max-width: 1440px;
-  translate: 50%;
-  right: 50%;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
   background-color: $darkblue;
 }
 
 app-atfsection {
   overflow-x: hidden;
+  scroll-margin-top: 6vw;
 }
 
 app-aboutme {
   overflow-x: hidden;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    display: block;
+  }
+
+  app-myskills {
+    scroll-margin-top: 10vw;
+  }
 }
 
 app-myskills {
