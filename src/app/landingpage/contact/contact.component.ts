@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, input } from '@angular/core';
+import { NgModule, inject, input } from '@angular/core';
 import { Component, ViewChild } from '@angular/core';
 import {
   FormControl,
@@ -9,6 +9,7 @@ import {
   NgForm,
 } from '@angular/forms';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -18,6 +19,8 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  http = inject(HttpClient);
+
   userDetails = {
     name: '',
     email: '',
@@ -33,8 +36,43 @@ export class ContactComponent {
   validEmail: boolean = false;
   submitButtonClicked: boolean = false;
 
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://foerster-dev.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    console.log(this.userDetails, ngForm.submitted, ngForm.form.valid);
+
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.userDetails))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+            this.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      ngForm.resetForm();
+      this.resetForm();
+    }
+  }
+
   submitForm(form: any): void {
-    if (form.valid) {
+    if (form.valid && form.submitted) {
       console.log('Form data:', this.userDetails);
     }
     this.resetForm();

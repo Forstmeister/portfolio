@@ -20,12 +20,10 @@
       <span> Need a Frontend developer? <b>Contact me!</b> </span>
     </div>
     <div data-aos="fade-left" class="form-container">
-      <!--(ngSubmit)="submitForm(userForm)"-->
       <form
+        (ngSubmit)="onSubmit(userForm)"
         autocomplete="off"
         #userForm="ngForm"
-        action="/sendMail.php"
-        method="get"
       >
         <div class="form-group">
           <input
@@ -95,6 +93,7 @@
             [(ngModel)]="userDetails.email"
             (ngModelChange)="inputClicked('email')"
             required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             email
           />
           <div
@@ -148,8 +147,10 @@
             type="text"
             class="form-control"
             id="message"
+            #message="ngModel"
             autocomplete="off"
             name="message"
+            minlength="4"
             [class.error]="messageValueEntered"
             [ngClass]="{
               error: messageValueEntered,
