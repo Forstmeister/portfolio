@@ -32,18 +32,9 @@ app-aboutme {
   body {
     display: block;
   }
-
-  app-aboutme {
-    scroll-margin-top: 39px;
-  }
-
-  app-myskills {
-    scroll-margin-top: 109px;
-  }
 }
 
 app-myskills {
-  scroll-margin-top: 109px;
   overflow-x: hidden;
 }
 
