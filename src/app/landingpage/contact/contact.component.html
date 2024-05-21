@@ -20,10 +20,12 @@
       <span> Need a Frontend developer? <b>Contact me!</b> </span>
     </div>
     <div data-aos="fade-left" class="form-container">
+      <!--(ngSubmit)="submitForm(userForm)"-->
       <form
         autocomplete="off"
         #userForm="ngForm"
-        (ngSubmit)="submitForm(userForm)"
+        action="/sendMail.php"
+        method="get"
       >
         <div class="form-group">
           <input

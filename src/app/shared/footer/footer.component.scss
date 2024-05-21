@@ -49,6 +49,14 @@ section {
 .footer-right {
   margin-right: 100px;
   @include dFlex();
+}
+
+.footer-right-icons {
+  gap: 42px;
+  margin-top: 26px;
+  margin-right: 0;
+  padding-bottom: 23px;
+  @include dFlex();
   > div {
     > a {
       > svg {
@@ -62,15 +70,7 @@ section {
   }
 }
 
-.footer-right-icons {
-  gap: 42px;
-  margin-top: 26px;
-  margin-right: 0;
-  padding-bottom: 23px;
-  @include dFlex();
-}
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .footer-right-icons {
     margin-top: 26px;
     margin-right: 0;
