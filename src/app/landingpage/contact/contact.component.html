@@ -83,6 +83,7 @@
             class="form-control"
             id="email"
             name="email"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             [ngClass]="{
               error:
                 emailValueEntered ||
@@ -93,7 +94,6 @@
             [(ngModel)]="userDetails.email"
             (ngModelChange)="inputClicked('email')"
             required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             email
           />
           <div
@@ -208,7 +208,7 @@
           </label>
           <div class="checkbox-text">
             <span
-              >I've read the <a href="./privacy-policy">privacy policy</a> and
+              >I've read the <a href="/privacy-policy">privacy policy</a> and
               agree to the processing of my data as outlined.
             </span>
             <div

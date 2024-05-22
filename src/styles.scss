@@ -4,6 +4,12 @@ $purple: #9747ff;
 $darkblue: #141d2f;
 $darkbluetransp: #141d2fab;
 
+@mixin dFlex($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -11,31 +17,30 @@ $darkbluetransp: #141d2fab;
 }
 
 body {
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-items: center;
+  justify-content: center;
   flex-direction: column;
+  width: 100%;
   background-color: $darkblue;
+}
+
+@media (min-width: 1441px) {
+  body {
+    align-items: center;
+  }
 }
 
 app-atfsection {
   overflow-x: hidden;
-  scroll-margin-top: 6vw;
 }
 
 app-aboutme {
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 375px) {
-  body {
-    display: block;
-  }
-}
-
 app-myskills {
   overflow-x: hidden;
+  scroll-margin-top: 109px;
 }
 
 app-portfolio {
@@ -51,10 +56,28 @@ app-contact {
   overflow-x: hidden;
 }
 
-@mixin dFlex($jc: center, $ai: center) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
+@media only screen and (max-width: 1160px) {
+  app-atfsection {
+    scroll-margin-top: 120px;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  app-atfsection {
+    scroll-margin-top: 120px;
+  }
+
+  body {
+    display: block;
+  }
+
+  app-aboutme {
+    scroll-margin-top: 109px;
+  }
+
+  app-myskills {
+    scroll-margin-top: 109px;
+  }
 }
 
 /* poppins-100 - latin */

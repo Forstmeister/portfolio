@@ -36,7 +36,7 @@ export class ContactComponent {
   validEmail: boolean = false;
   submitButtonClicked: boolean = false;
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://foerster-dev.de/sendMail.php',
@@ -50,8 +50,6 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    console.log(this.userDetails, ngForm.submitted, ngForm.form.valid);
-
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
         .post(this.post.endPoint, this.post.body(this.userDetails))
@@ -69,13 +67,6 @@ export class ContactComponent {
       ngForm.resetForm();
       this.resetForm();
     }
-  }
-
-  submitForm(form: any): void {
-    if (form.valid && form.submitted) {
-      console.log('Form data:', this.userDetails);
-    }
-    this.resetForm();
   }
 
   submitButton() {
@@ -105,13 +96,13 @@ export class ContactComponent {
   inputClicked(value: string) {
     if (value === 'name') {
       this.nameValueEntered = true;
-      if (this.userDetails.name.length > 0) {
+      if (this.userDetails.name && this.userDetails.name.length > 0) {
         this.nameValueEntered = false;
       }
     }
     if (value === 'email') {
       this.emailValueEntered = true;
-      if (this.userDetails.email.length > 0) {
+      if (this.userDetails.email && this.userDetails.email.length > 0) {
         this.emailValueEntered = false;
         this.isEmailValid();
       }
@@ -121,7 +112,7 @@ export class ContactComponent {
     }
     if (value === 'message') {
       this.messageValueEntered = true;
-      if (this.userDetails.message.length > 0) {
+      if (this.userDetails.message && this.userDetails.message.length > 0) {
         this.messageValueEntered = false;
       }
     }

@@ -9,9 +9,12 @@ h1 {
 }
 
 section {
+  max-width: 1440px;
+  width: 100%;
   background-color: $darkblue;
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
 .atf-shape {
@@ -21,7 +24,7 @@ section {
     position: absolute;
     top: 268.6px;
     left: -5px;
-    width: 100%;
+    width: 102%;
     height: 1335px;
     z-index: 3;
   }
@@ -117,6 +120,7 @@ section {
   position: relative;
   @include dFlex($jc: flex-start);
   overflow-x: hidden;
+  height: 50px;
 }
 
 .line {
@@ -283,6 +287,11 @@ section {
   h1 {
     font-size: 36px;
   }
+
+  .scroll-down {
+    display: none;
+  }
+
   .hero-iam {
     font-size: 26px;
     margin-right: -10px;
@@ -295,6 +304,12 @@ section {
         margin-top: -18px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  section {
+    padding-bottom: 100px;
   }
 }
 
