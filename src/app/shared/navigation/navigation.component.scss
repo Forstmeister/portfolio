@@ -12,6 +12,11 @@ nav {
 
 .logo {
   padding-left: 100px;
+  > a {
+    > img {
+      width: 100%;
+    }
+  }
 }
 
 .link-conatiner {
@@ -87,6 +92,11 @@ nav {
   }
   .logo {
     padding-left: 25px;
+    > a {
+      > img {
+        width: 80%;
+      }
+    }
   }
 
   .menu-links {

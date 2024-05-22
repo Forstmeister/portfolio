@@ -17,7 +17,7 @@ export class PortfolioProjectComponent {
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: './../../assets/img/join.png',
-      link: 'https://christian-foerster.github.io/portfolio/',
+      link: 'https://join.foerster-dev.de/',
       github: 'https://github.com/Christian-Foerster/portfolio',
     },
     {
@@ -26,7 +26,7 @@ export class PortfolioProjectComponent {
       description:
         'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       image: './../../assets/img/polloloco.png',
-      link: 'https://christian-foerster.github.io/portfolio/',
+      link: 'https://pollo-loco.foerster-dev.de/',
       github: 'https://github.com/Christian-Foerster/portfolio',
     },
     {
@@ -35,8 +35,8 @@ export class PortfolioProjectComponent {
       description:
         'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       image: './../../assets/img/pokedex.png',
-      link: 'https://christian-foerster.github.io/portfolio/',
-      github: 'https://github.com/Christian-Foerster/portfolio',
+      link: 'https://pokedex.foerster-dev.de/',
+      github: 'https://github.com/Forstmeister/pokedex',
     },
     {
       title: 'Simple CRM',
