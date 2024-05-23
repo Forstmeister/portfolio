@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, inject, input } from '@angular/core';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Inject } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -10,17 +10,27 @@ import {
 } from '@angular/forms';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { TranslationService } from '../../shared/services/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, PortfolioComponent],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    PortfolioComponent,
+    TranslateModule,
+    RouterModule,
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
   constructor(private router: Router) {}
+  translate = Inject(TranslationService);
 
   http = inject(HttpClient);
 

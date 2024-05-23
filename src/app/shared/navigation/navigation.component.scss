@@ -29,6 +29,7 @@ nav {
   @include dFlex($ai: flex-start);
   flex-direction: column;
   > a {
+    text-wrap: nowrap;
     font-size: 23px;
     @include dFlex();
     text-decoration: none;
@@ -55,7 +56,6 @@ nav {
 .menu-links {
   @include dFlex();
   gap: 29px;
-  margin-right: 100px;
 }
 
 .d-none {

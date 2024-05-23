@@ -1,16 +1,16 @@
 <section>
   <div class="line"></div>
   <div class="footer-left">
-    <a href="#top">
+    <a [routerLink]="['']" fragment="top">
       <img src="./../../../assets/img/foerster.svg" alt="" />
     </a>
     <span>
       <a
-        href="/imprint"
+        [routerLink]="'/imprint'"
         (mouseover)="hoverListItem()"
         (mouseleave)="hoverListItem()"
-        >imprint</a
-      >
+        >{{ "imprint" | translate }}
+      </a>
       <div class="underline" *ngIf="listItemHovered"></div>
     </span>
   </div>
@@ -20,7 +20,7 @@
   <div class="footer-right">
     <div class="footer-right-icons">
       <div>
-        <a href="https://github.com/Forstmeister" target="_blank">
+        <a routerLink="https://github.com/Forstmeister" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -73,7 +73,7 @@
     </div>
     <span class="imprint-mobile">
       <a
-        href="/imprint"
+        routerLink="/imprint"
         (mouseover)="hoverListItem()"
         (mouseleave)="hoverListItem()"
         >imprint</a

@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { TranslationService } from '../../shared/services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -34,8 +33,7 @@ export class PortfolioProjectComponent {
     {
       title: 'Pokédex',
       subtitle: 'JavaScript | HTML | CSS | Api',
-      description:
-        'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      description: 'pokedex.description',
       image: './../../assets/img/pokedex.png',
       link: 'https://pokedex.foerster-dev.de/',
       github: 'https://github.com/Forstmeister/pokedex',
@@ -43,13 +41,10 @@ export class PortfolioProjectComponent {
     {
       title: 'Simple CRM',
       subtitle: 'Angular | Firebase',
-      description:
-        'A very Simple Customer Relationship Management system working with CRUD functionality.',
+      description: 'simple_crm.description',
       image: './../../assets/img/simplecrm.png',
       link: 'https://christian-foerster.github.io/portfolio/',
       github: 'https://github.com/Christian-Foerster/portfolio',
     },
   ];
-
-  constructor() {}
 }

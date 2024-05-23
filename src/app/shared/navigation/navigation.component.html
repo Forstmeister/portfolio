@@ -100,21 +100,9 @@
         [class.clicked]="i === clickedIndex"
         (click)="clickEvent(i); closeWithTimeout()"
         href="{{ item.link }}"
-        >{{ item.name }}</a
+        >{{ item.name | translate }}</a
       >
       <div [class.underline]="i === clickedIndex"></div>
     </div>
-  </div>
-  <div class="language">
-    <img
-      (click)="translate.switchLanguage('en')"
-      src="/assets/img/icon/english.png"
-      alt=""
-    />
-    <img
-      (click)="translate.switchLanguage('de')"
-      src="/assets/img/icon/german.png"
-      alt=""
-    />
   </div>
 </div>

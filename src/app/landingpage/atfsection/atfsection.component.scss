@@ -85,8 +85,9 @@ section {
   > a {
     > button {
       margin-top: 44px;
-      width: 165px;
+      text-wrap: nowrap;
       height: 58px;
+      padding: 8px;
       border-radius: 10px;
       background-color: $green;
       border: 0;
@@ -263,7 +264,7 @@ section {
     > a {
       > button {
         margin-top: 24px;
-        width: 133px;
+        min-width: 150px;
         height: 49px;
         font-size: 16px;
       }

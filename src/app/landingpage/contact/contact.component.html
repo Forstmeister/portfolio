@@ -5,19 +5,19 @@
   <div data-aos="fade-right" class="header">
     <div class="line"></div>
     <div class="headline">
-      <h1>Contact</h1>
+      <h1>{{ "contact" | translate }}</h1>
     </div>
   </div>
   <div class="wrapper">
     <div data-aos="fade-right" class="info-box">
       <div class="sub-head">
-        <span>Got a problem to solve?</span>
+        <span>{{ "contact_subtext" | translate }}</span>
       </div>
-      <span
-        >Contact me through this form, I am interested in hearing from you,
-        knowing your ideas and contributing to your projects with my work.</span
-      >
-      <span> Need a junior Frontend developer? <b>Contact me!</b> </span>
+      <span>{{ "contact_subtext_2" | translate }}</span>
+      <span>
+        {{ "contact_subtext_3" | translate }}
+        <b>{{ "contact_me" | translate }}</b>
+      </span>
     </div>
     <div data-aos="fade-left" class="form-container">
       <form
@@ -27,7 +27,7 @@
       >
         <div class="form-group">
           <input
-            placeholder="your name"
+            placeholder="{{ 'your_name' | translate }}"
             type="text"
             class="form-control"
             id="name"
@@ -72,13 +72,13 @@
             </svg>
           </div>
           <div *ngIf="nameValueEntered" [ngClass]="'error'">
-            Name is required.
+            <span>{{ "name_required" | translate }}</span>
           </div>
         </div>
         <div class="form-group">
           <input
             autocomplete="off"
-            placeholder="your email"
+            placeholder="{{ 'your_email' | translate }}"
             type="email"
             class="form-control"
             id="email"
@@ -137,13 +137,13 @@
             *ngIf="emailValueEntered && userDetails.email.length == 0"
             [ngClass]="'error'"
           >
-            email is required.
+            <span>{{ "email_required" | translate }}</span>
           </div>
         </div>
         <div class="form-group">
           <textarea
             rows="8"
-            placeholder="your message"
+            placeholder="{{ 'your_message' | translate }}"
             type="text"
             class="form-control"
             id="message"
@@ -191,7 +191,7 @@
             </svg>
           </div>
           <div *ngIf="messageValueEntered" [ngClass]="'error'">
-            message is required.
+            <span>{{ "message_required" | translate }}</span>
           </div>
         </div>
         <div class="checkbox-container">
@@ -208,14 +208,17 @@
           </label>
           <div class="checkbox-text">
             <span
-              >I've read the <a href="/privacy-policy">privacy policy</a> and
-              agree to the processing of my data as outlined.
+              >{{ "check_text1" | translate }}
+              <a [routerLink]="'/privacy-policy'"
+                >{{ "check_text2" | translate }}
+              </a>
+              {{ "check_text3" | translate }}
             </span>
             <div
               *ngIf="submitButtonClicked && !userDetails.checkbox"
               [ngClass]="'error'"
             >
-              please accept the privacy policy
+              <span>{{ "privacy_policy_required" | translate }}</span>
             </div>
           </div>
         </div>
@@ -223,7 +226,7 @@
           type="submit"
           [disabled]="!userDetails.checkbox || !userForm.valid"
         >
-          Send message :&rpar;
+          {{ "message_button" | translate }} :&rpar;
           <div
             (click)="
               submitButton();
