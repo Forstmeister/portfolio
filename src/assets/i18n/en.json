@@ -1,0 +1,18 @@
+{
+  "About me": "About me",
+  "Skills": "Skills",
+  "Portfolio": "Portfolio",
+  "contact": "Contact",
+  "iam": "I am",
+  "headline": "FRONTEND DEVELOPER",
+  "lets_talk": "Let's Talk !",
+  "About_text": "Hi, I am a junior Front-end developer based in Flensburg, Germany. Ihave a passion for creating visually appealing and user-friendlywebsites. With a strong background in HTML, CSS, and JavaScript, Iarning new technologies and improving my skills. I am always eagerto take on new challenges and contribute to exciting projects.",
+  "About_text_2": "Some personal thing to share(...) My hobbies are making music,playing sports, and being creative. I enjoy exploring new ideas andstaying active through various physical activities.",
+  "About_text_3": "Some personal thing to share(...) I am passionate about continuouslearning and self-improvement. I regularly engage in courses andworkshops to expand my knowledge and skills, staying up-to-date withindustry trends and advancements.",
+  "my_skills": "My skills",
+  "my_skills_text": "I have gained experience in building projects with various front end technologies and concepts.",
+  "get_in_touch": "get in touch",
+  "portfolio_text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+  "join.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+  "polloloco.description": "A simple Jump-and-Run game based on an object-oriented approach. Help pepe to find coins and salsa bottles to fight against the killer chicken."
+}

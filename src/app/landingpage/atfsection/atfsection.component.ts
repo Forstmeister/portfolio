@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
-
+import { Component, Inject } from '@angular/core';
+import { TranslationService } from '../../shared/services/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-atfsection',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './atfsection.component.html',
   styleUrl: './atfsection.component.scss',
 })
-export class AtfsectionComponent {}
+export class AtfsectionComponent {
+  translate = Inject(TranslationService);
+}

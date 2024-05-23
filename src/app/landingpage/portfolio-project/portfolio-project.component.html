@@ -12,12 +12,12 @@
       <div class="description">
         <span class="head">{{ item.title }}</span>
         <span class="subtitle"> {{ item.subtitle }}</span>
-        <span class="text">{{ item.description }}</span>
+        <span class="text">{{ item.description | translate }}</span>
         <div class="button-container">
-          <a [href]="item.link">
+          <a [href]="item.link" target="_blank">
             <button class="first-button">Live test</button>
           </a>
-          <a [href]="item.github">
+          <a [href]="item.github" target="_blank">
             <button class="second-button">Github</button>
           </a>
         </div>

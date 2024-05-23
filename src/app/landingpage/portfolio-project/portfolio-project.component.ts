@@ -1,21 +1,24 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { TranslationService } from '../../shared/services/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio-project',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './portfolio-project.component.html',
   styleUrl: './portfolio-project.component.scss',
 })
 export class PortfolioProjectComponent {
+  translate = Inject(TranslationService);
+
   portfolio: any = [
     {
       title: 'Join',
       subtitle: 'Angular | TypeScript | HTML | CSS | Firebase',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'join.description',
       image: './../../assets/img/join.png',
       link: 'https://join.foerster-dev.de/',
       github: 'https://github.com/Forstmeister/join',
@@ -23,8 +26,7 @@ export class PortfolioProjectComponent {
     {
       title: 'Pollo Loco',
       subtitle: 'JavaScript | HTML | CSS',
-      description:
-        'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+      description: 'polloloco.description',
       image: './../../assets/img/polloloco.png',
       link: 'https://pollo-loco.foerster-dev.de/',
       github: 'https://github.com/Forstmeister/polloloco',

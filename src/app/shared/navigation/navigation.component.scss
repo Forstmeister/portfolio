@@ -19,6 +19,12 @@ nav {
   }
 }
 
+.language {
+  padding-right: 100px;
+  @include dFlex();
+  gap: 8px;
+}
+
 .link-conatiner {
   @include dFlex($ai: flex-start);
   flex-direction: column;
@@ -86,6 +92,13 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
+  .language {
+    padding-right: 25px;
+    > img {
+      width: 30px;
+    }
+  }
+
   .mobile-icon {
     display: unset !important;
     padding-right: 25px;

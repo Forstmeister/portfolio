@@ -6,12 +6,14 @@ import {
   trigger,
 } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
   animations: [
@@ -28,6 +30,8 @@ import { Component } from '@angular/core';
   ],
 })
 export class NavigationComponent {
+  constructor(public translate: TranslationService) {}
+
   MenuNames: any = [
     { name: 'About me', link: '#about' },
     { name: 'Skills', link: '#skills' },
