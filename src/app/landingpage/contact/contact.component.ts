@@ -10,6 +10,7 @@ import {
 } from '@angular/forms';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -19,6 +20,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  constructor(private router: Router) {}
+
   http = inject(HttpClient);
 
   userDetails = {
@@ -61,7 +64,10 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            console.info('send post complete');
+            this.router.navigate(['/success']);
+          },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
