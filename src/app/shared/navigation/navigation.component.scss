@@ -20,6 +20,7 @@ nav {
 }
 
 .language {
+  cursor: pointer;
   padding-right: 100px;
   @include dFlex();
   gap: 8px;
