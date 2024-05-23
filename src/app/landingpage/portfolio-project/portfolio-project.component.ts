@@ -18,7 +18,7 @@ export class PortfolioProjectComponent {
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: './../../assets/img/join.png',
       link: 'https://join.foerster-dev.de/',
-      github: 'https://github.com/Christian-Foerster/portfolio',
+      github: 'https://github.com/Forstmeister/join',
     },
     {
       title: 'Pollo Loco',
@@ -27,7 +27,7 @@ export class PortfolioProjectComponent {
         'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       image: './../../assets/img/polloloco.png',
       link: 'https://pollo-loco.foerster-dev.de/',
-      github: 'https://github.com/Christian-Foerster/portfolio',
+      github: 'https://github.com/Forstmeister/polloloco',
     },
     {
       title: 'Pokédex',
