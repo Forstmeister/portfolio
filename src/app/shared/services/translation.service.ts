@@ -9,7 +9,7 @@ export class TranslationService {
 
   constructor(private translate: TranslateService) {
     // Set default language and initialize currentLanguage variable
-    this.currentLanguage = 'en';
+    this.currentLanguage = 'de';
     translate.setDefaultLang(this.currentLanguage);
   }
 

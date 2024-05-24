@@ -11,4 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AtfsectionComponent {
   translate = Inject(TranslationService);
+
+  linkedinUrl: string = 'https://www.linkedin.com/in/christian-f-335764299/';
+  email: string = 'mailto:c.foerster@tutanota.com';
+  githubUrl: string = 'https://github.com/Forstmeister';
 }

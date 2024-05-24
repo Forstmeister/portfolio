@@ -30,7 +30,7 @@
     <div class="line"></div>
     <div class="icon-contact-container">
       <div>
-        <a href="https://github.com/Forstmeister" target="_blank">
+        <a [href]="githubUrl" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -46,7 +46,7 @@
         </a>
       </div>
       <div>
-        <a href="mailto:c.foerster@tutanota.com">
+        <a [href]="email">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -62,10 +62,7 @@
         </a>
       </div>
       <div>
-        <a
-          href="https://www.linkedin.com/in/christian-f-335764299/"
-          target="_blank"
-        >
+        <a [href]="linkedinUrl" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -82,7 +79,7 @@
       </div>
     </div>
     <div class="mail-contact">
-      <a href="mailto:c.foerster@tutanota.com">c.foerster&#64;tutanota.com</a>
+      <a [href]="email">c.foerster&#64;tutanota.com</a>
     </div>
   </div>
   <div class="scroll-down">

@@ -19,7 +19,7 @@ section {
   background-color: $darkblue;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  padding-bottom: 50px;
   @include dFlex($ai: flex-start);
   flex-direction: column;
 }
