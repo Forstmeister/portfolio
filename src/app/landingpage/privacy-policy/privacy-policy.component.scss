@@ -1,5 +1,21 @@
+@import "./../../../styles.scss";
+
 * {
   color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: $darkblue;
+}
+
+@media (min-width: 1441px) {
+  body {
+    align-items: center;
+  }
 }
 
 h1 {
@@ -8,6 +24,8 @@ h1 {
 }
 
 section {
+  max-width: 1440px;
+  width: 100%;
   padding: 0 100px 50px 100px;
 }
 

@@ -112,7 +112,7 @@ export class ContactComponent {
   inputClicked(value: string) {
     if (value === 'name') {
       this.nameValueEntered = true;
-      if (this.userDetails.name && this.userDetails.name.length > 0) {
+      if (this.userDetails.name && this.userDetails.name.length > 4) {
         this.nameValueEntered = false;
       }
     }

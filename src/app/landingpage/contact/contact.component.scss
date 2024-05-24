@@ -17,6 +17,7 @@
 
 section {
   background-color: $darkblue;
+  max-width: 1440px;
   position: relative;
   overflow: hidden;
   padding-bottom: 50px;
@@ -199,7 +200,6 @@ form {
     }
   }
   > button {
-    cursor: pointer;
     @include dFlex();
     width: 253px;
     height: 58px;
