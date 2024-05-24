@@ -82,7 +82,7 @@
             type="email"
             class="form-control"
             id="email"
-            minlength="4"
+            minlength="10"
             name="email"
             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             [ngClass]="{
@@ -151,11 +151,11 @@
             #message="ngModel"
             autocomplete="off"
             name="message"
-            minlength="4"
+            minlength="5"
             [class.error]="messageValueEntered"
             [ngClass]="{
               error: messageValueEntered,
-              allok: userDetails.message.length > 0
+              allok: userDetails.message.length > 5
             }"
             (click)="inputClicked('message')"
             [(ngModel)]="userDetails.message"
@@ -177,7 +177,7 @@
               />
             </svg>
           </div>
-          <div *ngIf="userDetails.message.length > 0" class="alert-icon">
+          <div *ngIf="userDetails.message.length > 4" class="alert-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -191,7 +191,16 @@
               />
             </svg>
           </div>
-          <div *ngIf="messageValueEntered" [ngClass]="'error'">
+          <div
+            *ngIf="userDetails.message.length < 5 && messageValueEntered"
+            [ngClass]="'error'"
+          >
+            <span>{{ "min-length-message" | translate }}</span>
+          </div>
+          <div
+            *ngIf="messageValueEntered && userDetails.message.length <= 0"
+            [ngClass]="'error'"
+          >
             <span>{{ "message_required" | translate }}</span>
           </div>
         </div>
