@@ -247,7 +247,7 @@
           [disabled]="!userDetails.checkbox || !userForm.valid"
           [ngStyle]="{
             cursor:
-              userDetails.checkbox || userForm.valid ? 'pointer' : 'default'
+              userDetails.checkbox && userForm.valid ? 'pointer' : 'default'
           }"
         >
           {{ "message_button" | translate }} :&rpar;
