@@ -4,20 +4,6 @@
   color: white;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  background-color: $darkblue;
-}
-
-@media (min-width: 1441px) {
-  body {
-    align-items: center;
-  }
-}
-
 h1 {
   font-size: 90px;
   padding: 0 100px 50px 100px;
@@ -27,8 +13,12 @@ h1 {
 
 section {
   max-width: 1440px;
+}
 
-  padding: 0 100px 50px 100px;
+.wrapper {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 800px) {
