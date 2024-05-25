@@ -29,7 +29,9 @@ section {
     hyphens: auto;
   }
 
-  section {
-    padding: 0 25px 25px 25px;
+  .wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 25px;
   }
 }
