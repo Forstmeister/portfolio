@@ -287,11 +287,6 @@ section {
 }
 
 @media only screen and (max-width: 800px) {
-  section {
-    padding-bottom: 0;
-    height: 100vh;
-  }
-
   h1 {
     font-size: 36px;
   }
@@ -312,12 +307,6 @@ section {
         margin-top: -13px;
       }
     }
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  section {
-    padding-bottom: 100px;
   }
 }
 

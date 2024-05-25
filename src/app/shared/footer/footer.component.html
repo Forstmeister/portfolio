@@ -11,7 +11,12 @@
         (mouseleave)="hoverListItem()"
         >{{ "imprint" | translate }}
       </a>
-      <div class="underline" *ngIf="listItemHovered"></div>
+      <div
+        [ngClass]="{
+          'underline-default': !listItemHovered,
+          underline: listItemHovered
+        }"
+      ></div>
     </span>
   </div>
   <div class="footer-middle">
@@ -78,7 +83,12 @@
         (mouseleave)="hoverListItem()"
         >imprint</a
       >
-      <div class="underline" *ngIf="listItemHovered"></div>
+      <div
+        [ngClass]="{
+          'underline-default': !listItemHovered,
+          underline: listItemHovered
+        }"
+      ></div>
     </span>
   </div>
 </section>
