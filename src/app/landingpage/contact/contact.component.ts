@@ -128,7 +128,7 @@ export class ContactComponent {
     }
     if (value === 'message') {
       this.messageValueEntered = true;
-      if (this.userDetails.message && this.userDetails.message.length > 4) {
+      if (this.userDetails.message && this.userDetails.message.length > 20) {
         this.messageValueEntered = false;
       }
     }

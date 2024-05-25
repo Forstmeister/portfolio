@@ -76,7 +76,7 @@
             *ngIf="userDetails.name.length < 5 && nameValueEntered"
             [ngClass]="'error'"
           >
-            <span>{{ "min-length-message" | translate }}</span>
+            <span>{{ "min-length-name" | translate }}</span>
           </div>
           <div
             *ngIf="nameValueEntered && userDetails.name.length <= 0"
@@ -162,11 +162,11 @@
             #message="ngModel"
             autocomplete="off"
             name="message"
-            minlength="5"
+            minlength="20"
             [class.error]="messageValueEntered"
             [ngClass]="{
               error: messageValueEntered,
-              allok: userDetails.message.length > 5
+              allok: userDetails.message.length > 20
             }"
             (click)="inputClicked('message')"
             [(ngModel)]="userDetails.message"
@@ -188,7 +188,7 @@
               />
             </svg>
           </div>
-          <div *ngIf="userDetails.message.length > 4" class="alert-icon">
+          <div *ngIf="userDetails.message.length > 20" class="alert-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -203,7 +203,7 @@
             </svg>
           </div>
           <div
-            *ngIf="userDetails.message.length < 5 && messageValueEntered"
+            *ngIf="userDetails.message.length < 20 && messageValueEntered"
             [ngClass]="'error'"
           >
             <span>{{ "min-length-message" | translate }}</span>
