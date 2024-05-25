@@ -92,9 +92,10 @@
             type="email"
             class="form-control"
             id="email"
-            minlength="10"
             name="email"
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            minlength="10"
+            maxlength="100"
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             [ngClass]="{
               error:
                 emailValueEntered ||
