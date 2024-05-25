@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../services/translation.service';
-import { RouterModule, withHashLocation } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
