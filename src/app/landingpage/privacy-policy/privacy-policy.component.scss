@@ -1,3 +1,5 @@
+@import "./../../../styles.scss";
+
 * {
   color: white;
 }
@@ -5,19 +7,31 @@
 h1 {
   font-size: 90px;
   padding: 0 100px 50px 100px;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 section {
-  padding: 0 100px 50px 100px;
+  max-width: 1440px;
+}
+
+.wrapper {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 800px) {
   h1 {
     font-size: 45px;
     padding: 0 25px 25px 25px;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
-  section {
-    padding: 0 25px 25px 25px;
+  .wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-bottom: 25px;
   }
 }

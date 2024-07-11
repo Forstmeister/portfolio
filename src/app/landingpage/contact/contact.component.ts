@@ -112,7 +112,7 @@ export class ContactComponent {
   inputClicked(value: string) {
     if (value === 'name') {
       this.nameValueEntered = true;
-      if (this.userDetails.name && this.userDetails.name.length > 0) {
+      if (this.userDetails.name && this.userDetails.name.length > 4) {
         this.nameValueEntered = false;
       }
     }
@@ -128,7 +128,7 @@ export class ContactComponent {
     }
     if (value === 'message') {
       this.messageValueEntered = true;
-      if (this.userDetails.message && this.userDetails.message.length > 0) {
+      if (this.userDetails.message && this.userDetails.message.length > 20) {
         this.messageValueEntered = false;
       }
     }

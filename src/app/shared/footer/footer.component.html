@@ -1,7 +1,7 @@
 <section>
   <div class="line"></div>
   <div class="footer-left">
-    <a [routerLink]="['']" fragment="top">
+    <a href="#top">
       <img src="./../../../assets/img/foerster.svg" alt="" />
     </a>
     <span>
@@ -11,7 +11,12 @@
         (mouseleave)="hoverListItem()"
         >{{ "imprint" | translate }}
       </a>
-      <div class="underline" *ngIf="listItemHovered"></div>
+      <div
+        [ngClass]="{
+          'underline-default': !listItemHovered,
+          underline: listItemHovered
+        }"
+      ></div>
     </span>
   </div>
   <div class="footer-middle">
@@ -20,7 +25,7 @@
   <div class="footer-right">
     <div class="footer-right-icons">
       <div>
-        <a routerLink="https://github.com/Forstmeister" target="_blank">
+        <a href="https://github.com/Forstmeister" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -36,7 +41,7 @@
         </a>
       </div>
       <div>
-        <a href="mailto:c.foerster@tutanota.com">
+        <a href="mailto:hello@foerster-dev.de">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -78,7 +83,12 @@
         (mouseleave)="hoverListItem()"
         >imprint</a
       >
-      <div class="underline" *ngIf="listItemHovered"></div>
+      <div
+        [ngClass]="{
+          'underline-default': !listItemHovered,
+          underline: listItemHovered
+        }"
+      ></div>
     </span>
   </div>
 </section>

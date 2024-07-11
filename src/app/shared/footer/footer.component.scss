@@ -5,6 +5,7 @@ section {
   background-color: $darkblue;
   border-top: 4px solid $green;
   height: 261px;
+  max-width: 1440px;
 }
 
 .imprint-mobile {
@@ -44,6 +45,11 @@ section {
 .underline {
   width: 55.5px;
   border-bottom: 2px solid #1cdae6;
+}
+
+.underline-default {
+  width: 55.5px;
+  border-bottom: 2px solid transparent;
 }
 
 .footer-right {

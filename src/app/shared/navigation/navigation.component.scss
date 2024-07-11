@@ -4,7 +4,7 @@ nav {
   @include dFlex($jc: space-between);
   background-color: $darkblue;
   height: 109px;
-  width: 100%;
+  max-width: 1440px;
   position: sticky;
   z-index: 99999;
   top: 0;
