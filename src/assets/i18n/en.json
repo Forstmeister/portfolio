@@ -17,7 +17,7 @@
   "join.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
   "polloloco.description": "A simple Jump-and-Run game based on an object-oriented approach. Help pepe to find coins and salsa bottles to fight against the killer chicken.",
   "pokedex.description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
-  "simple_crm.description": "A very Simple Customer Relationship Management system working with CRUD functionality.",
+  "dabubble.description": "dabubble is a comprehensive messenger app. All data is provided in real-time by Firestore.",
   "contact_subtext": "Got a problem to solve?",
   "contact_subtext_2": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
   "contact_subtext_3": "Need a junior Frontend developer?",

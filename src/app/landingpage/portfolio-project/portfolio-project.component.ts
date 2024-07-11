@@ -39,12 +39,12 @@ export class PortfolioProjectComponent {
       github: 'https://github.com/Forstmeister/pokedex',
     },
     {
-      title: 'Simple CRM',
+      title: 'dabubble',
       subtitle: 'Angular | Firebase',
-      description: 'simple_crm.description',
-      image: './../../assets/img/simplecrm.png',
-      link: 'https://christian-foerster.github.io/portfolio/',
-      github: 'https://github.com/Christian-Foerster/portfolio',
+      description: 'dabubble.description',
+      image: './../../assets/img/dabubble.png',
+      link: 'https://dabubble.foerster-dev.de/',
+      github: 'https://github.com/Forstmeister/dabubble',
     },
   ];
 }
